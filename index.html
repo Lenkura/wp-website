@@ -21,16 +21,14 @@
   <!-- Javascript, you can have more than one. -->
   <script src='wireframe.js'></script>
 
-  <div id='header'>
+  <header id='header'>
     <!-- Image sourced from www.rmit.edu.au for educational purposes only -->
-    <div><img src='../media/RMIT-Logo.png' alt='RMIT University logo' height=80 />Raymond Louey</div>
-  </div>
-
+    <section><img src='../media/RMIT-Logo.png' alt='RMIT University logo' height=80 />Raymond Louey</section>
+  </header>
 </head>
 
-<body>
 
-  <div id='nav'>
+  <nav id='nav'>
     Assignments:
     <!-- link locations: relative to current directory -->
     <ul>
@@ -43,15 +41,15 @@
     <a href="/~e54061/secure" target="_blank">Secure Resources Area</a> |
     <!-- link location: external -->
     <a href='https://drive.google.com/open?id=1uSRn6PHDcpsUtmFQ6MPMM-g2go4o22VP' target="_blank">Course Materials</a>
-  </div>
+  </nav>
 
-  <div id='main'>
+  <section id='main'>
     <article id='about-me'>
       <h2>About me</h2>
       <p>
         <img src='../media/avatar.png' width='200' alt='my photo' />
       </p>
-      <section id="more-about-me">
+      <article id="more-about-me">
         
         <h3>Who is your tutor / instructor</h3>
         <div>Trevor Reynolds</div>
@@ -78,17 +76,15 @@
         <h3>Do you have any interests or hobbies?</h3>
         <div>In my spare time, you can find me either playing video games or taking care of my garden. Recently with being stuck at home, I acquired a Raspberry Pi and have been tinkering with that. Currently I'm trying to set it up as a media centre</div>
         
-      </section>
+      </article>
     </article>
   
-  </div>
+  </section>
 
-</body>
-
-  <div id=footer>
+  <footer id=footer>
     &copy; Raymond Louey
     <script>document.write(new Date().getFullYear());</script><noscript>1989</noscript>.
     https://github.com/Lenkura/wp <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
-  </div>
+  </footer>
 
 </html>
