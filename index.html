@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Your name here">
+  <meta name="author" content="Raymond Louey">
   <meta name="description" content="My first webpage">
   <!-- meta http-equiv="X-Frame-Options" content="deny" -->
 
@@ -21,16 +21,14 @@
   <!-- Javascript, you can have more than one. -->
   <script src='wireframe.js'></script>
 
-  <div id='header'>
+  <header id='header'>
     <!-- Image sourced from www.rmit.edu.au for educational purposes only -->
-    <div><img src='../media/RMIT-Logo.png' alt='RMIT University logo' height=80 />Insert Your Name Here</div>
-  </div>
-
+    <section><img src='../media/RMIT-Logo.png' alt='RMIT University logo' height=80 />Raymond Louey</section>
+  </header>
 </head>
 
-<body>
 
-  <div id='nav'>
+  <nav id='nav'>
     Assignments:
     <!-- link locations: relative to current directory -->
     <ul>
@@ -43,55 +41,49 @@
     <a href="/~e54061/secure" target="_blank">Secure Resources Area</a> |
     <!-- link location: external -->
     <a href='https://drive.google.com/open?id=1uSRn6PHDcpsUtmFQ6MPMM-g2go4o22VP' target="_blank">Course Materials</a>
-  </div>
+  </nav>
 
-  <div id='main'>
+  <section id='main'>
     <article id='about-me'>
       <h2>About me</h2>
       <p>
         <img src='../media/avatar.png' width='200' alt='my photo' />
       </p>
-      <section id="more-about-me">
+      <article id="more-about-me">
         
         <h3>Who is your tutor / instructor</h3>
-        <div>_</div>
+        <div>Trevor Reynolds</div>
 
         <h3>Who is your labber / workshopper</h3>
-        <div>_</div>
+        <div>Srikanth Thudumu</div>
 
         <h3>Have you any programming or web design experience?</h3>
-        <div>_</div>
+        <div>I have taken other courses at RMIT related to IT, such as Programming 1. Otherwise it's mostly self experimentation and tinkering in my spare time.</div>
 
         <h3>Do you see yourself as a programmer, designer, or both?</h3>
-        <div>_</div>
+        <div>My personal projects see myself act in both of these results and I've enjoyed both of them. If I had to pick one, I would say I enjoy programming more and would be more keen to pursue a career in this area</div>
 
         <h3>What has brought you to this course at RMIT?</h3>
-        <div>_</div>
+        <div>I was looking for a career change, particulary in an IT field. RMIT offered online courses which worked best with my schedule. Coupled with a few personal recommendations, I decided to undertake this course at RMIT.</div>
 
         <h3>What are you hoping to get out of the course?</h3>
-        <div>_</div>
+        <div>By the end of this course, I'd hope I could design and create a functional website.</div>
 
         <h3>What websites do you use the most?</h3>
-        <div>_ &larr; <i>NB: "family friendly"!</i></div>
+        <div>When I find myself procrastinating, which is often, I generally wonder over to reddit or youtube. Otherwise I frequently pop over to Ozbargain to see if I can pick up something for cheap</div>
 
         <h3>Do you have any interests or hobbies?</h3>
-        <div>_</div>
+        <div>In my spare time, you can find me either playing video games or taking care of my garden. Recently with being stuck at home, I acquired a Raspberry Pi and have been tinkering with that. Currently I'm trying to set it up as a media centre</div>
         
-      </section>
+      </article>
     </article>
-    
-    <aside>
-      <div align='center'>Deprecated code sample.</div>
-    </aside>
-    
-  </div>
+  
+  </section>
 
-</body>
-
-  <div id=footer>
-    &copy; Insert your name here
+  <footer id=footer>
+    &copy; Raymond Louey
     <script>document.write(new Date().getFullYear());</script><noscript>1989</noscript>.
-    Put your git repo link here (important!) and other links if you wish. <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
-  </div>
+    https://github.com/Lenkura/wp <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
+  </footer>
 
 </html>
