@@ -1,1 +1,55 @@
 /* Insert your styles here */
+html{
+    background-color: black;
+    color: white;
+}
+main{
+    padding-top: 10px;
+    padding-bottom: 70px;
+  
+}
+header {
+    position:relative;
+    top: 0px;
+    left: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+nav {
+    background-color: #3C441E;
+    color:white;
+    position:sticky;
+    top: 0px;
+    font-size:20px;
+    border-radius: 5px;
+}
+nav > h1 {
+    margin-left: 20px;
+    transform: translateY(30%);
+    padding-bottom: 15px;
+    
+}
+nav > ul {
+    list-style: none; 
+    transform: translateY(-30%);
+   
+}
+
+nav > ul> li {
+    display:inline;
+    padding: 3px 10px;
+    border-style:solid;
+    border-radius: 5px;
+    border-color:#77853c;
+    
+   
+}
+footer {
+    background-color:#6F7B37;
+    color:hsl(111, 25%, 80%) ;
+    width:100%;
+    position: fixed;
+    bottom: 0px;
+    opacity: 90%;
+  }
+  
