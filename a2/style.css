@@ -46,6 +46,13 @@ nav > ul> li {
     border-color:#77853c;
     flex:1;
     text-align:center;
+    transition: 2s;
+}
+li:hover{
+    background-color: #77853c;
+}
+p {
+    display:block;
 }
 footer {
     background-color:#6F7B37;
