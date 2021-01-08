@@ -47,6 +47,7 @@ nav > ul> li {
     flex:1;
     text-align:center;
     transition: 2s;
+    z-index: 10;
 }
 li:hover{
     background-color: #77853c;
@@ -54,6 +55,62 @@ li:hover{
 p {
     display:block;
 }
+article.postcard {
+    color:black;
+    box-sizing: border-box;
+    height:500px;
+    width: 80%;
+    margin: 0 10%;
+    overflow: auto;
+    position:relative;
+  }
+article.postcard div {
+    border: 4px groove;
+    background-color: #ddd;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 0 auto;
+    position:absolute;
+    transition: 3s;
+    backface-visibility: hidden;
+    z-index: -1;
+
+  }
+  article.postcard div iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    min-width:740px;
+    min-height:390px;
+    position:absolute;
+  }
+  article.postcard div:nth-child(1) {
+    border-color: red;
+    transform: rotateY(0deg);
+  }
+  article.postcard div:nth-child(2) {
+    border-color: blue;
+    transform: rotateY(180deg);
+  }
+  article.postcard:hover div:nth-child(1) {
+    transform: rotateY(180deg);
+  }
+  article.postcard:hover div:nth-child(2) {
+    transform: rotateY(360deg);
+  }
+  .carddate{
+      text-align: right;
+  }
+  .cardnote{
+    text-align: right;
+    font-style: italic;
+}
+  .cardend{
+      text-align: center;
+  }
 .watermark{
     opacity: 50%;   
     float:right;
