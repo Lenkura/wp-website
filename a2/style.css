@@ -1,129 +1,179 @@
 /* Insert your styles here */
-html{
+
+html {
     background-color: black;
     color: white;
 }
-main{
+
+main {
     padding-top: 10px;
-    padding-bottom: 70px;
-  
+    padding-bottom: 100px;
 }
+
 header {
-    position:relative;
+    font-size: 36px;
+    position: relative;
     top: 0px;
     left: 5px;
-    font-size: 30px;
     text-align: center;
 }
+
 nav {
     background-color: #3C441E;
-    color:white;
-    position:sticky;
+    color: white;
+    position: sticky;
     top: 0px;
-    font-size:20px;
+    font-size: 25px;
     border-radius: 5px;
 }
-nav > h1 {
+
+nav>h1 {
+    display: none;
     margin-left: 20px;
     transform: translateY(30%);
     padding-bottom: 15px;
-    
-}
-nav > ul {
-    list-style: none;   
-    transform: translateY(-30%);
-    transform: translateX(-40px);
-    display:flex;
-    width:100%;
-    
 }
 
-nav > ul> li {
-    display:inline;
+nav>ul {
+    list-style: none;
+    transform: translateY(-30%);
+    transform: translateX(-40px);
+    display: flex;
+    width: 100%;
+}
+
+nav>ul>li {
+    display: inline;
     padding: 3px 5px;
-    border-style:solid;
+    border-style: solid;
     border-radius: 5px;
-    border-color:#77853c;
-    flex:1;
-    text-align:center;
+    border-color: #77853c;
+    flex: 1;
+    text-align: center;
     transition: 2s;
     z-index: 10;
 }
-li:hover{
+
+li:hover {
     background-color: #77853c;
 }
+
 p {
-    display:block;
+    display: block;
 }
-article.postcard {
-    color:black;
-    box-sizing: border-box;
-    height:500px;
-    width: 80%;
-    margin: 0 10%;
-    overflow: auto;
-    position:relative;
-  }
+
 article.postcard div {
     border: 4px groove;
+    color: black;
     background-color: #ddd;
     height: auto;
     width: 100%;
     box-sizing: border-box;
     padding: 5px 10px;
     margin: 0 auto;
-    position:absolute;
-    transition: 3s;
-    backface-visibility: hidden;
+    position: relative;
     z-index: -1;
+}
 
-  }
-  article.postcard div iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    min-width:740px;
-    min-height:390px;
-    position:absolute;
-  }
-  article.postcard div:nth-child(1) {
-    border-color: red;
-    transform: rotateY(0deg);
-  }
-  article.postcard div:nth-child(2) {
-    border-color: blue;
-    transform: rotateY(180deg);
-  }
-  article.postcard:hover div:nth-child(1) {
-    transform: rotateY(180deg);
-  }
-  article.postcard:hover div:nth-child(2) {
-    transform: rotateY(360deg);
-  }
-  .carddate{
-      text-align: right;
-  }
-  .cardnote{
+article.postcard div iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 370px;
+    min-height: 195px;
+    position: relative;
+}
+
+.carddate {
+    text-align: right;
+}
+
+.cardnote {
     text-align: right;
     font-style: italic;
 }
-  .cardend{
-      text-align: center;
-  }
-.watermark{
-    opacity: 50%;   
-    float:right;
+
+.cardend {
+    text-align: center;
+}
+
+.watermark {
+    opacity: 50%;
+    float: right;
     padding-right: 10px;
 }
+
 footer {
-    background-color:#6F7B37;
-    color:hsl(111, 25%, 80%) ;
-    height:fit-content;
-    width:100%;
+    font-size: 12px;
+    background-color: #6F7B37;
+    color: hsl(111, 25%, 80%);
+    height: fit-content;
+    width: 100%;
     position: fixed;
     bottom: 0px;
-    opacity: 90%;
+    opacity: 90%
+}
 
-  }
-  
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (min-width: 1000px) {
+    header {
+        font-size: 30px;
+    }
+    article.postcard {
+        color: black;
+        box-sizing: border-box;
+        height: 500px;
+        width: 80%;
+        margin: 0 10%;
+        overflow: auto;
+        position: relative;
+    }
+    article.postcard div {
+        border: 4px groove;
+        background-color: #ddd;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        margin: 0 auto;
+        position: absolute;
+        transition: 3s;
+        backface-visibility: hidden;
+        z-index: -1;
+    }
+    article.postcard div iframe {
+        left: 0;
+        top: 0;
+        height: 100% - 5px;
+        width: 100%-5px;
+        min-width: 740px;
+        min-height: 390px;
+        position: absolute;
+    }
+    article.postcard div:nth-child(1) {
+        border-color: red;
+        transform: rotateY(0deg);
+    }
+    article.postcard div:nth-child(2) {
+        border-color: blue;
+        transform: rotateY(180deg);
+    }
+    article.postcard:hover div:nth-child(1) {
+        transform: rotateY(180deg);
+    }
+    article.postcard:hover div:nth-child(2) {
+        transform: rotateY(360deg);
+    }
+    footer {
+        font-size: 15px;
+        background-color: #6F7B37;
+        color: hsl(111, 25%, 80%);
+        height: fit-content;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        opacity: 90%
+    }
+}
