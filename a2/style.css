@@ -1,13 +1,26 @@
-/* Insert your styles here */
-
 html {
-    background-color: black;
-    color: white;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 main {
     padding-top: 10px;
     padding-bottom: 100px;
+}
+
+.parallax {
+    /*Adapted from https://www.w3schools.com/howto/howto_css_parallax.asp */
+    background-image: url("../media/risingsun.png");
+    /*https://en.wikipedia.org/wiki/Rising_Sun_(badge)#/media/File:Australian_Army_Emblem.svg */
+    height: auto;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.content {
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 header {
@@ -30,8 +43,8 @@ nav {
 nav>h1 {
     display: none;
     margin-left: 20px;
+    margin-bottom: 15px;
     transform: translateY(30%);
-    padding-bottom: 15px;
 }
 
 nav>ul {
@@ -75,13 +88,12 @@ article.postcard div {
     z-index: -1;
 }
 
-article.postcard div iframe {
+article.postcard div img {
     left: 0;
     top: 0;
-    height: 100%;
+    box-sizing: border-box;
+    height: auto;
     width: 100%;
-    min-width: 370px;
-    min-height: 195px;
     position: relative;
 }
 

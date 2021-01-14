@@ -32,7 +32,8 @@
   </nav>
 
   <main>
-    <article id='Website Under Construction'>
+  <div class="parallax">
+    <article class='content'>
       <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
       <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
       <p> Filler Text Filler TextFiller Tr TextFiller TextFiller TextFiller Text Filler Text Filler TextFiller Tr TextFiller TextFiller TextFiller Text </p>
@@ -48,6 +49,13 @@
       <p> Filler Text Filler TextFiller Tr TextFiller TextFiller TextFiller Text Filler Text Filler TextFiller Tr TextFiller TextFiller TextFiller Text</p>
       <p> Filler Text Filler TextFiller Tr TextFiller TextFiller TextFiller Text </p>
     </article>
+    <article>
+      <p> Lemonade banana smoothie pie </p>
+      <p> Lemonade banana smoothie pie </p>
+      <p> Lemonade banana smoothie pie </p>
+      <p> Lemonade banana smoothie pie </p>
+    </article>
+    </div>
     <article class='postcard'>
       <div>
         <p class='carddate'>January 13th. 1915.</p>
@@ -61,11 +69,12 @@
         <p class='cardend'>*********************************</p>
       </div>
       <div><img src='../media/Cairomap.png'/></div>
+      <!-- image source : Google */ -->
     </article>
   </main>
 
   <footer>
-    <img src='../media/Poppysun.png' alt='Poppy & Rising Sun' class='watermark' />
+    <img src='../media/Poppy.png' alt='Poppy' class='watermark' /> <!-- image source : http://clipart-library.com/poppy-cliparts.html */ -->
     <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Put your name(s), student number(s) and group name here. Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </div>
