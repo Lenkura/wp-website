@@ -60,7 +60,7 @@
           I will keep the stamps you sent as I may be able to exchange them for others that will suit Dot. No more news, hope all you home folk are in good health, my thoughts are always with you. Jim Graham and Bill Money wish to be remembered to you all.</p>
         <p class='cardend'>*********************************</p>
       </div>
-      <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1242292.993384903!2d30.881804717713553!3d30.67952560040736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sau!4v1610110735406!5m2!1sen!2sau" width="740" height="390" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+      <div><img src='../media/Cairomap.png'/></div>
     </article>
   </main>
 
