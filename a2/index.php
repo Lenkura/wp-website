@@ -10,6 +10,9 @@
   <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
   <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
   <script src='../wireframe.js'></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -21,18 +24,18 @@
   <nav>
     <h1>Navigation</h1>
     <ul>
-      <li>Home</li>
-      <li>Letter</li>
-      <li>Other</li>
-      <li>Filler</li>
-      <li>Pineapple</li>
+      <li id='location'>Home</li>
+      <a href="letters.html"><li>Letter</li></a>
+      <a href=".html"><li>Other</li></a>
+      <a href=".html"><li>Filler</li></a>
+      <a href=".html"><li>Pineapple</li></a>
     </ul>
 
 
   </nav>
 
   <main>
-  <div class="parallax">
+
     <article class='content'>
       <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
       <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
@@ -55,7 +58,8 @@
       <p> Lemonade banana smoothie pie </p>
       <p> Lemonade banana smoothie pie </p>
     </article>
-    </div>
+
+
     <article class='postcard'>
       <div>
         <p class='carddate'>January 13th. 1915.</p>

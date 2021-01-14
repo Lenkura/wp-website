@@ -6,9 +6,6 @@ html {
 main {
     padding-top: 10px;
     padding-bottom: 100px;
-}
-
-.parallax {
     /*Adapted from https://www.w3schools.com/howto/howto_css_parallax.asp */
     background-image: url("../media/risingsun.png");
     /*https://en.wikipedia.org/wiki/Rising_Sun_(badge)#/media/File:Australian_Army_Emblem.svg */
@@ -17,6 +14,7 @@ main {
     background-position: top;
     background-repeat: no-repeat;
     background-size: auto;
+    z-index: -2;
 }
 
 .content {
@@ -55,20 +53,38 @@ nav>ul {
     width: 100%;
 }
 
-nav>ul>li {
+nav a:link,
+a:visited,
+#location {
+    width: 100%;
     display: inline;
     padding: 3px 5px;
     border-style: solid;
     border-radius: 5px;
     border-color: #77853c;
-    flex: 1;
     text-align: center;
-    transition: 2s;
+    transition: 1s;
     z-index: 10;
 }
 
-li:hover {
-    background-color: #77853c;
+nav a {
+    background-color: #3C441E;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #c3db61;
+    color: #1b1f0f
+}
+
+#location {
+    background-color: #131309;
+}
+
+#location:hover {
+    background-color: #131309;
+    color: white;
 }
 
 p {
@@ -85,7 +101,7 @@ article.postcard div {
     padding: 5px 10px;
     margin: 0 auto;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 article.postcard div img {
@@ -95,15 +111,23 @@ article.postcard div img {
     height: auto;
     width: 100%;
     position: relative;
+    z-index: 1;
 }
 
 .carddate {
     text-align: right;
+    font-size: 28px;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .cardnote {
     text-align: right;
     font-style: italic;
+}
+
+.cardcontent {
+    font-size: 25px;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .cardend {
@@ -134,40 +158,23 @@ footer {
         font-size: 30px;
     }
     article.postcard {
-        color: black;
         box-sizing: border-box;
-        height: 500px;
+        height: auto;
         width: 80%;
         margin: 0 10%;
-        overflow: auto;
         position: relative;
     }
     article.postcard div {
-        border: 4px groove;
-        background-color: #ddd;
-        height: 100%;
         width: 100%;
-        box-sizing: border-box;
         padding: 5px 10px;
-        margin: 0 auto;
         position: absolute;
         transition: 3s;
         backface-visibility: hidden;
-        z-index: -1;
-    }
-    article.postcard div img {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
     }
     article.postcard div:nth-child(1) {
-        border-color: red;
         transform: rotateY(0deg);
     }
     article.postcard div:nth-child(2) {
-        border-color: blue;
         transform: rotateY(180deg);
     }
     article.postcard:hover div:nth-child(1) {
@@ -178,12 +185,5 @@ footer {
     }
     footer {
         font-size: 15px;
-        background-color: #6F7B37;
-        color: hsl(111, 25%, 80%);
-        height: fit-content;
-        width: 100%;
-        position: fixed;
-        bottom: 0px;
-        opacity: 90%
     }
 }
