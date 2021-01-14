@@ -17,12 +17,37 @@ main {
     z-index: -2;
 }
 
-.content {
-    background-color: rgb(0, 0, 0, 0.5);
+article {
+    font-size: 25px;
+    font-family: Quattrocento Sans, sans-serif;
+    background-color: rgb(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    border-style: double;
+    padding: 15px 20px;
+    width: 70%;
+    margin: auto;
 }
 
-header {
-    font-size: 36px;
+article>h1 {
+    font-size: 30px;
+    font-family: 'Lora', serif;
+}
+
+#baker {
+    float: left;
+    overflow: auto;
+    margin: 0 3%;
+}
+
+#service {
+    float: right;
+    overflow: auto;
+    margin: 0 1%;
+}
+
+header>div {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
     position: relative;
     top: 0px;
     left: 5px;
@@ -85,10 +110,6 @@ nav a:hover {
 #location:hover {
     background-color: #131309;
     color: white;
-}
-
-p {
-    display: block;
 }
 
 article.postcard div {
