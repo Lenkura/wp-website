@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 2 - Home</title>
+
+    <!-- Keep wireframe.css for debugging, add your css to style.css -->
+    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime(" style.css "); ?>">
+    <script src='../wireframe.js'></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div>Douglas Raymond Baker - ANZAC Letter Collection</div>
+    </header>
+
+    <nav>
+        <h1>Navigation</h1>
+        <ul>
+            <a href="index.php">
+                <li>Home</li>
+            </a>
+            <li id='location'>Introduction</li>
+            <a href="letters.html">
+                <li>Letters</li>
+            </a>
+            <a href=".html">
+                <li>Links</li>
+            </a>
+            <a href=".html">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <section>
+
+            </section>
+            <section>
+                <p>
+                    <h2>Additional Comments by Ian Stuart Baker (son of Douglas Richard Baker)</h2>
+                    As the grandson of the Douglas Raymond, I'd like to share some thoughts with modern readers. Apart from the language issues that my Dad highlights, it would also help to recognise that in Grandfathers day, the letter was the only means of international
+                    communications for average people (telegrams were expensive and used rarely and international telephone calls, rarer still). That's why these letters are so important and why their content gives us window into their lives. From discussions
+                    with my Dad, it has came to light that the content of letters to his direct family deliberately leave out much of the dreadful suffering and drudgery experienced by the diggers. This intentional self-editing was intended to allay the
+                    fears and concerns of those at home, inparticular, his mother and sisters. Finally, let me express a debt of thanks to Great Aunt Alice for diligently transcribing the original letters for without this effort, we would not have the
+                    material we do today. Also, my gratitude to my father for his work transforming the hand-written script into a typed paper record and then into electronic format, making my part in this infinitely easier.
+                </p>
+            </section>
+        </article>
+
+
+
+    </main>
+
+    <footer>
+        <img src='../media/Poppy.png' alt='Poppy' class='watermark' />
+        <!-- image source : http://clipart-library.com/poppy-cliparts.html */ -->
+        <div>&copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> Raymond Louey s3853718 Last modified
+            <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </div>
+        <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+
+        <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -20,29 +20,27 @@ main {
 article {
     font-size: 25px;
     font-family: Quattrocento Sans, sans-serif;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgba(11, 37, 14, 0.8);
     box-sizing: border-box;
-    border-style: double;
-    padding: 15px 20px;
+    border-style: solid;
+    padding: 15px 10px;
     width: 70%;
-    margin: auto;
+    margin: 0 13%;
 }
 
-article>h1 {
+article>h2 {
     font-size: 30px;
     font-family: 'Lora', serif;
 }
 
 #baker {
-    float: left;
     overflow: auto;
-    margin: 0 3%;
+    margin-left: auto;
 }
 
 #service {
-    float: right;
     overflow: auto;
-    margin: 0 1%;
+    margin: auto;
 }
 
 header>div {
@@ -206,5 +204,15 @@ footer {
     }
     footer {
         font-size: 15px;
+    }
+    #baker {
+        float: left;
+        overflow: auto;
+        margin: 0 2%;
+    }
+    #service {
+        float: right;
+        overflow: auto;
+        margin: 0 1%;
     }
 }
