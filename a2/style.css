@@ -33,6 +33,25 @@ article>h2 {
     font-family: 'Lora', serif;
 }
 
+article>a {
+    font-size: 20px;
+    color: #77853c;
+    text-decoration: none;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+article>a:hover {
+    font-size: 21px;
+    color: #d0eb64;
+}
+
+article>a+p {
+    font-size: 18px;
+    margin-left: 20px;
+    padding: none;
+}
+
 #baker {
     overflow: auto;
     margin-left: auto;
