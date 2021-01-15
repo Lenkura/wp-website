@@ -18,18 +18,18 @@ main {
 }
 
 article {
-    font-size: 25px;
+    font-size: 22px;
     font-family: Quattrocento Sans, sans-serif;
     background-color: rgba(11, 37, 14, 0.8);
     box-sizing: border-box;
     border-style: solid;
     padding: 15px 10px;
     width: 70%;
-    margin: 0 13%;
+    margin: 0 13% 2%;
 }
 
 article>h2 {
-    font-size: 30px;
+    font-size: 27px;
     font-family: 'Lora', serif;
 }
 
@@ -157,6 +157,11 @@ article.postcard div img {
     opacity: 50%;
     float: right;
     padding-right: 10px;
+}
+
+#glossary>ul>li {
+    font-style: italic;
+    list-style: square;
 }
 
 footer {
