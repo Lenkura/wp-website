@@ -35,12 +35,12 @@
       <a href="letters.html">
         <li>Letters</li>
       </a>
-      <a href=".html">
-        <li>Links</li>
-      </a>
-      <a href=".html">
-        <li>Contact</li>
-      </a>
+      <a href="links.html">
+                <li>Links</li>
+            </a>
+            <a href="contact.html">
+                <li>Contact</li>
+            </a>
     </ul>
   </nav>
 

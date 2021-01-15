@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 2 - Home</title>
+
+    <!-- Keep wireframe.css for debugging, add your css to style.css -->
+    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime(" style.css "); ?>">
+    <script src='../wireframe.js'></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div>Douglas Raymond Baker - ANZAC Letter Collection</div>
+    </header>
+
+    <nav>
+        <h1>Navigation</h1>
+        <ul>
+            <a href="index.php">
+                <li>Home</li>
+            </a>
+            <a href="Introduction.html">
+                <li>Introduction</li>
+            </a>
+            <a href="letters.html">
+                <li>Letters</li>
+            </a>
+            <li id='location'>Links</li>
+            <a href="contact.html">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
+
+
+
+    </main>
+
+    <footer>
+        <img src='../media/Poppy.png' alt='Poppy' class='watermark' />
+        <!-- image source : http://clipart-library.com/poppy-cliparts.html */ -->
+        <div>&copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> Raymond Louey s3853718 Last modified
+            <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </div>
+        <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+
+        <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+
+    </footer>
+
+</body>
+
+</html>
