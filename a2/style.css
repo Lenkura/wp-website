@@ -66,12 +66,27 @@ article>a+p {
     margin: auto;
 }
 
-header>div {
+header {
+    overflow: hidden;
+    width: 100%;
+    background-image: url("../media/headerback.png");
+    /* Image source https://thediveo-e.blogspot.com/2015/12/e-paper-for-screencasting-sort-of.html */
+    background-size: cover;
+    background-position: center;
+}
+
+header>img {
+    float: right;
+    padding-right: 33%;
+    padding-top: 3px;
+    margin: auto
+}
+
+header>h1 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    top: 0px;
-    left: 5px;
+    padding-left: 33%;
     text-align: center;
 }
 
@@ -84,19 +99,13 @@ nav {
     border-radius: 5px;
 }
 
-nav>h1 {
-    display: none;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    transform: translateY(30%);
-}
-
 nav>ul {
     list-style: none;
     transform: translateY(-30%);
     transform: translateX(-40px);
     display: flex;
     width: 100%;
+    margin-top: 1px;
 }
 
 nav a:link,
