@@ -45,6 +45,27 @@
     </nav>
 
     <main>
+        <article>
+            <h1>Contact</h1>
+            <p>If you would like to reach us for any reason, please fill out the following form</p>
+            <form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="POST" target='_blank' id='contactform'>
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Douglas@email.com">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="1234567890">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Reason for contact">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform"></textarea>
+                </fieldset>
+                <input type="submit" value="Submit">
+
+            </form>
+        </article>
     </main>
 
     <footer>

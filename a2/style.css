@@ -20,7 +20,7 @@ main {
 article {
     font-size: 22px;
     font-family: Quattrocento Sans, sans-serif;
-    background-color: rgba(11, 37, 14, 0.8);
+    background-color: rgba(11, 37, 14, 0.85);
     box-sizing: border-box;
     border-style: solid;
     padding: 15px 10px;
@@ -31,6 +31,10 @@ article {
 article>h2 {
     font-size: 27px;
     font-family: 'Lora', serif;
+}
+
+article>p {
+    padding-left: 5px;
 }
 
 article>a {
@@ -180,7 +184,51 @@ article.postcard div img {
 
 #glossary>ul>li {
     font-style: italic;
-    list-style: square;
+    list-style: none;
+    padding-top: 8px;
+}
+
+fieldset {
+    /*Form templating adapted from https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776 */
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    display: inline-flexbox;
+    margin: auto;
+    width: 60%;
+}
+
+form>fieldset>label {
+    text-align: right;
+    width: auto;
+    float: left;
+    margin-top: 10px;
+}
+
+form>fieldset>input {
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-family: Quattrocento Sans, sans-serif;
+}
+
+form>fieldset>textarea {
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-family: Quattrocento Sans, sans-serif;
+}
+
+form>input {
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin-left: 45%;
+    margin-top: 10px;
+}
+
+#message {
+    height: calc(100vmax/12);
 }
 
 footer {
