@@ -33,6 +33,12 @@ article>h2 {
     font-family: 'Lora', serif;
 }
 
+h2 {
+    font-size: 27px;
+    font-family: 'Lora', serif;
+    padding-left: 10px;
+}
+
 article>p {
     padding-left: 5px;
 }
@@ -64,6 +70,22 @@ article>a+p {
 #service {
     overflow: auto;
     margin: auto;
+}
+
+.letternav {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    margin-top: 5%;
+}
+
+#letternavl {
+    margin-left: 5%;
+}
+
+#letternavr {
+    float: right;
+    margin-right: 5%;
 }
 
 header {
@@ -143,7 +165,7 @@ nav a:hover {
     color: white;
 }
 
-article.postcard div {
+.postcard>div {
     border: 4px groove;
     color: black;
     background-color: #ddd;
@@ -156,7 +178,7 @@ article.postcard div {
     z-index: 0;
 }
 
-article.postcard div img {
+.postcard>div>img {
     left: 0;
     top: 0;
     box-sizing: border-box;
@@ -259,18 +281,33 @@ footer {
         font-size: 30px;
     }
     article.postcard {
+        background-color: transparent;
         box-sizing: border-box;
-        height: auto;
+        border-style: none;
+        height: 600px;
         width: 80%;
         margin: 0 10%;
         position: relative;
     }
     article.postcard div {
+        border: 4px groove;
+        background-color: #ddd;
+        height: 600px;
         width: 100%;
+        box-sizing: border-box;
+        border-style: none;
         padding: 5px 10px;
+        margin: 0 auto;
         position: absolute;
         transition: 3s;
         backface-visibility: hidden;
+        z-index: 0;
+    }
+    article.postcard div img {
+        left: 0;
+        top: 0;
+        height: 600px;
+        position: absolute;
     }
     article.postcard div:nth-child(1) {
         transform: rotateY(0deg);
