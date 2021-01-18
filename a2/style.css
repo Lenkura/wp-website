@@ -20,7 +20,7 @@ main {
 article {
     font-size: 22px;
     font-family: Quattrocento Sans, sans-serif;
-    background-color: rgba(11, 37, 14, 0.85);
+    background-color: #0b250ed9;
     box-sizing: border-box;
     border-style: solid;
     padding: 15px 10px;
@@ -191,6 +191,8 @@ article.postcard div:nth-child(1) {
     margin: auto;
     width: 90%;
     background-color: #463f37;
+    border-color: white;
+    border-width: 5px;
 }
 
 .cardnote>h2 {
@@ -213,6 +215,16 @@ article.postcard div:nth-child(1) {
     text-align: center;
 }
 
+.letter {
+    margin-top: 10px;
+    background-image: url(../media/Paper.png);
+    background-size: cover;
+    color: black;
+    font-family: 'Shadows Into Light', cursive;
+    border-style: solid;
+    border-color: white;
+}
+
 .letternav {
     width: 100%;
     margin: 0;
@@ -220,13 +232,20 @@ article.postcard div:nth-child(1) {
     margin-top: 5%;
 }
 
+#letterdirectory {
+    margin-left: 33%;
+    text-decoration: none;
+}
+
 #letternavl {
     margin-left: 5%;
+    text-decoration: none;
 }
 
 #letternavr {
     float: right;
     margin-right: 5%;
+    text-decoration: none;
 }
 
 .watermark {
