@@ -101,9 +101,10 @@ nav {
     color: white;
     position: sticky;
     top: 0px;
-    font-size: 25px;
+    font-size: 23px;
     border-radius: 5px;
     z-index: 1;
+    font-family: 'Lora', serif;
 }
 
 nav>ul {
