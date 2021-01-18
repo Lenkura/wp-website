@@ -72,22 +72,6 @@ article>a+p {
     margin: auto;
 }
 
-.letternav {
-    width: 100%;
-    margin: 0;
-    position: relative;
-    margin-top: 5%;
-}
-
-#letternavl {
-    margin-left: 5%;
-}
-
-#letternavr {
-    float: right;
-    margin-right: 5%;
-}
-
 header {
     overflow: hidden;
     width: 100%;
@@ -168,7 +152,6 @@ nav a:hover {
 .postcard>div {
     border: 4px groove;
     color: black;
-    background-color: #ddd;
     height: auto;
     width: 100%;
     box-sizing: border-box;
@@ -176,6 +159,14 @@ nav a:hover {
     margin: 0 auto;
     position: relative;
     z-index: 0;
+}
+
+article.postcard div:nth-child(1) {
+    background-color: #dfd1c1;
+    border: 10px solid transparent;
+    border-image: url(../media/cardborder.png) 30 round;
+    /* Border image from: https://dlpng.com/png/6720324 */
+    /* Border image adapted from https://www.w3schools.com/cssref/css3_pr_border-image.asp */
 }
 
 .postcard>div>img {
@@ -192,11 +183,25 @@ nav a:hover {
     text-align: right;
     font-size: 28px;
     font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 0;
 }
 
 .cardnote {
-    text-align: right;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    background-color: #463f37;
+}
+
+.cardnote>h2 {
+    font-size: 27px;
+    font-family: 'Lora', serif;
+}
+
+.cardnote>p {
+    font-size: 18px;
     font-style: italic;
+    margin: 0;
 }
 
 .cardcontent {
@@ -206,6 +211,22 @@ nav a:hover {
 
 .cardend {
     text-align: center;
+}
+
+.letternav {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    margin-top: 5%;
+}
+
+#letternavl {
+    margin-left: 5%;
+}
+
+#letternavr {
+    float: right;
+    margin-right: 5%;
 }
 
 .watermark {
