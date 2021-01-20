@@ -34,10 +34,10 @@
         <li>Introduction</li>
       </a>
       <a href="letters.html">
-        <li>Letters</li>
+        <li>Post Card Example</li>
       </a>
       <a href="links.html">
-        <li>Links</li>
+        <li>Document Index</li>
       </a>
       <a href="contact.html">
         <li>Contact</li>

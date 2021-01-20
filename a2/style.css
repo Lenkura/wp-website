@@ -207,7 +207,7 @@ article.postcard div:nth-child(1) {
     margin: 0;
 }
 
-.cardcontent {
+.cardcontent>p {
     font-size: 25px;
     font-family: 'Shadows Into Light', cursive;
 }
