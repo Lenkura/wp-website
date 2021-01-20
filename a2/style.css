@@ -244,10 +244,12 @@ article.postcard div:nth-child(1) {
     margin: 0;
     position: relative;
     margin-top: 5%;
+    justify-content: space-between;
+    display: flex;
+    /* Aligning 3 elements horizontally https://stackoverflow.com/questions/2603700/how-to-align-3-divs-left-center-right-inside-another-div */
 }
 
 #letterdirectory {
-    margin-left: 33%;
     text-decoration: none;
 }
 
