@@ -51,7 +51,20 @@ article>a {
     text-decoration: underline;
 }
 
+section>ul>li>a {
+    font-size: 20px;
+    color: #77853c;
+    text-decoration: none;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
 article>a:hover {
+    font-size: 21px;
+    color: #d0eb64;
+}
+
+section>ul>li>a:hover {
     font-size: 21px;
     color: #d0eb64;
 }
@@ -259,6 +272,14 @@ article.postcard div:nth-child(1) {
     font-style: italic;
     list-style: none;
     padding-top: 8px;
+}
+
+section>h3 {
+    margin-left: 10px;
+}
+
+section>ul>li {
+    list-style: none;
 }
 
 fieldset {
