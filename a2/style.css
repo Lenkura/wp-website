@@ -124,6 +124,10 @@ header>h1 {
     text-align: center;
 }
 
+header>h1+h1 {
+    padding-left: 0;
+}
+
 nav {
     background-color: #3C441E;
     color: white;
@@ -360,6 +364,9 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
+    header>h1+h1 {
+        padding-left: auto;
+    }
     nav>ul {
         flex-wrap: unset;
     }
@@ -379,7 +386,41 @@ footer {
     }
 }
 
+@media only screen and (min-width: 1100px) {
+    #baker {
+        float: left;
+        margin: 0 auto;
+        max-width: 120px;
+        height: auto;
+        width: auto;
+        display: flex;
+    }
+    #service {
+        float: right;
+        margin: 0 auto;
+        max-width: 150px;
+        height: auto;
+        display: flex;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
+    header>img {
+        float: right;
+        padding-right: auto;
+        padding-top: 3px;
+        margin: auto;
+    }
+    header>h1 {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        padding-left: auto;
+        text-align: center;
+    }
+    header>h1+h1 {
+        padding-left: 33%;
+    }
     article {
         width: 70%;
     }
@@ -438,14 +479,17 @@ footer {
     }
     #baker {
         float: left;
-        overflow: auto;
-        margin: 0 2px;
-        max-width: 175px;
+        margin: 0 auto;
+        max-width: 150px;
+        height: auto;
+        width: auto;
+        display: flex;
     }
     #service {
         float: right;
-        overflow: auto;
-        margin: 0 2px;
-        max-width: 275px;
+        margin: 0 auto;
+        max-width: 200px;
+        height: auto;
+        display: flex;
     }
 }
