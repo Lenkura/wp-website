@@ -30,7 +30,7 @@
   <nav>
     <ul>
       <li id='location'>Home</li>
-      <a href="Introduction.html">
+      <a href="introduction.html">
         <li>Introduction</li>
       </a>
       <a href="letters.html">
