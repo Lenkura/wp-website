@@ -18,7 +18,7 @@ main {
 }
 
 article {
-    font-size: 22px;
+    font-size: 25px;
     font-family: Quattrocento Sans, sans-serif;
     background-color: #0b250ed9;
     box-sizing: border-box;
@@ -30,8 +30,9 @@ article {
 }
 
 article>h2 {
-    font-size: 27px;
+    font-size: 28px;
     font-family: 'Lora', serif;
+    text-align: center;
 }
 
 h2 {
@@ -49,7 +50,7 @@ article+article {
 }
 
 article>a {
-    font-size: 20px;
+    font-size: 28px;
     color: #77853c;
     text-decoration: none;
     margin-left: 10px;
@@ -57,7 +58,7 @@ article>a {
 }
 
 section>ul>li>a {
-    font-size: 20px;
+    font-size: 24px;
     color: #77853c;
     text-decoration: none;
     margin-left: 10px;
@@ -65,12 +66,12 @@ section>ul>li>a {
 }
 
 article>a:hover {
-    font-size: 21px;
+    font-size: 26px;
     color: #d0eb64;
 }
 
 section>ul>li>a:hover {
-    font-size: 21px;
+    font-size: 26px;
     color: #d0eb64;
 }
 
@@ -126,6 +127,7 @@ header>h1 {
 
 header>h1+h1 {
     padding-left: 0;
+    margin: auto;
 }
 
 nav {
@@ -149,11 +151,14 @@ nav>ul {
     flex-wrap: wrap;
 }
 
+nav>ul>li {
+    min-height: 40px;
+}
+
 nav a:link,
 a:visited,
 #location {
     width: 100%;
-    display: inline;
     padding: 3px 5px;
     border-style: solid;
     border-radius: 5px;
@@ -167,6 +172,7 @@ nav a {
     background-color: #3C441E;
     color: white;
     text-decoration: none;
+    min-height: 40px;
 }
 
 nav a:hover {
@@ -423,6 +429,10 @@ footer {
     }
     article {
         width: 70%;
+        font-size: 22px;
+    }
+    article>h2 {
+        font-size: 25px;
     }
     nav>ul {
         flex-wrap: unset;
@@ -433,23 +443,34 @@ footer {
     header {
         font-size: 30px;
     }
+    nav>ul>li {
+        min-height: auto;
+    }
+    nav a {
+        min-height: auto;
+    }
+    article>a {
+        font-size: 25px;
+    }
     article.postcard {
+        font-size: 22px;
         background-color: transparent;
         box-sizing: border-box;
         border-style: none;
-        height: 600px;
+        height: 700px;
         width: 80%;
         margin: 0 10%;
         position: relative;
     }
     article.postcard div {
+        font-size: 22px;
         border: 4px groove;
         background-color: #ddd;
-        height: 600px;
+        height: 700px;
         width: 100%;
         box-sizing: border-box;
         border-style: none;
-        padding: 5px 10px;
+        padding: 5px auto;
         margin: 0 auto;
         position: absolute;
         transition: 3s;
