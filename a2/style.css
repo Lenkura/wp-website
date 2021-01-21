@@ -24,8 +24,9 @@ article {
     box-sizing: border-box;
     border-style: solid;
     padding: 15px 10px;
-    width: 70%;
+    width: auto;
     margin: 0 13% 2%;
+    min-width: 420px;
 }
 
 article>h2 {
@@ -41,6 +42,10 @@ h2 {
 
 article>p {
     padding-left: 5px;
+}
+
+article+article {
+    clear: both;
 }
 
 article>a {
@@ -76,13 +81,23 @@ article>a+p {
 }
 
 #baker {
-    overflow: auto;
+    display: block;
     margin-left: auto;
+    margin-right: auto;
 }
 
 #service {
-    overflow: auto;
-    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img+img {
+    margin-top: 5px;
+}
+
+img+article {
+    margin-top: 5px
 }
 
 header {
@@ -127,6 +142,7 @@ nav>ul {
     display: flex;
     width: 100%;
     margin-top: 1px;
+    flex-wrap: wrap;
 }
 
 nav a:link,
@@ -229,6 +245,10 @@ article.postcard div:nth-child(1) {
     text-align: center;
 }
 
+.hovertip {
+    visibility: hidden;
+}
+
 .letter {
     margin-top: 10px;
     background-image: url(../media/Paper.png);
@@ -291,6 +311,7 @@ fieldset {
     display: inline-flexbox;
     margin: auto;
     width: 60%;
+    min-width: 350px;
 }
 
 form>fieldset>label {
@@ -338,9 +359,36 @@ footer {
     opacity: 90%
 }
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 800px) {
+    nav>ul {
+        flex-wrap: unset;
+    }
+    #baker {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    #service {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+    }
+}
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
+    article {
+        width: 70%;
+    }
+    nav>ul {
+        flex-wrap: unset;
+    }
+    .hovertip {
+        visibility: visible;
+    }
     header {
         font-size: 30px;
     }
@@ -391,11 +439,13 @@ footer {
     #baker {
         float: left;
         overflow: auto;
-        margin: 0 2%;
+        margin: 0 2px;
+        max-width: 175px;
     }
     #service {
         float: right;
         overflow: auto;
-        margin: 0 1%;
+        margin: 0 2px;
+        max-width: 275px;
     }
 }
