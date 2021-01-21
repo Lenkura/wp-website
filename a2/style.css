@@ -7,7 +7,7 @@ main {
     padding-top: 10px;
     padding-bottom: 100px;
     /*Adapted from https://www.w3schools.com/howto/howto_css_parallax.asp */
-    background-image: url("../media/risingsun.png");
+    background-image: url("../../media/risingsun.png");
     /*https://en.wikipedia.org/wiki/Rising_Sun_(badge)#/media/File:Australian_Army_Emblem.svg */
     height: auto;
     background-attachment: fixed;
@@ -104,7 +104,7 @@ img+article {
 header {
     overflow: hidden;
     width: 100%;
-    background-image: url("../media/headerback.png");
+    background-image: url("../../media/headerback.png");
     /* Image source https://thediveo-e.blogspot.com/2015/12/e-paper-for-screencasting-sort-of.html */
     background-size: cover;
     background-position: center;
@@ -204,7 +204,7 @@ nav a:hover {
 article.postcard div:nth-child(1) {
     background-color: #dfd1c1;
     border: 10px solid transparent;
-    border-image: url(../media/cardborder.png) 30 round;
+    border-image: url("../../media/cardborder.png") 30 round;
     /* Border image from: https://dlpng.com/png/6720324 */
     /* Border image adapted from https://www.w3schools.com/cssref/css3_pr_border-image.asp */
 }
@@ -261,7 +261,7 @@ article.postcard div:nth-child(1) {
 
 .letter {
     margin-top: 10px;
-    background-image: url(../media/Paper.png);
+    background-image: url("../../media/paper.png");
     background-size: cover;
     color: black;
     font-family: 'Shadows Into Light', cursive;
@@ -515,7 +515,7 @@ footer {
     article.postcard div img {
         left: 0;
         top: 0;
-        height: 600px;
+        height: 700px;
         position: absolute;
     }
     article.postcard div:nth-child(1) {

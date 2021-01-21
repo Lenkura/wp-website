@@ -22,7 +22,7 @@
 <body>
 
   <header>
-    <img src='../media/drbakersmol.png' alt='Douglas Raymond Baker'>
+    <img src='../../media/drbakersmol.png' alt='Douglas Raymond Baker'>
     <h1>Douglas Raymond Baker</h1>
     <h1>An ANZAC Letter Collection</h1>
   </header>
@@ -46,8 +46,8 @@
   </nav>
 
   <main>
-    <img src='../media/drbaker.png' alt='Douglas Raymond Baker' id='baker'>
-    <img src='../media/bakerdocs.png' alt='Service Record' id='service'>
+    <img src='../../media/drbaker.png' alt='Douglas Raymond Baker' id='baker'>
+    <img src='../../media/bakerdocs.png' alt='Service Record' id='service'>
     <article class='content'>
 
       <h2> Welcome to the Douglas Raymond Baker Letter Collection
@@ -77,7 +77,7 @@
   </main>
 
   <footer>
-    <img src='../media/Poppy.png' alt='Poppy' class='watermark' /> <!-- image source : http://clipart-library.com/poppy-cliparts.html */ -->
+    <img src='../../media/Poppy.png' alt='Poppy' class='watermark' /> <!-- image source : http://clipart-library.com/poppy-cliparts.html */ -->
     <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Raymond Louey s3853718 Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </div>
