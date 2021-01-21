@@ -30,7 +30,7 @@ article {
 }
 
 article>h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-family: 'Lora', serif;
     text-align: center;
 }
@@ -314,6 +314,41 @@ section>ul>li {
     list-style: none;
 }
 
+.linksyear>li {
+    list-style: none;
+    /* Horzontal list CSS adapated from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_horizontal */
+    position: relative;
+    font-size: 28px;
+    margin: 10px auto;
+    padding: 0;
+}
+
+.linkyearbutton {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.linkyearbutton+label {
+    margin: 10px;
+    padding: 0px 25px;
+    border: 4px solid #77853c;
+    border-radius: 5px;
+    background-color: #3C441E;
+}
+
+input:checked+label {
+    background-color: #131309;
+}
+
+
+/* Button checkboxes adapted from https://stackoverflow.com/questions/15436450/style-checkboxes-as-toggle-buttons */
+
 fieldset {
     /*Form templating adapted from https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776 */
     display: grid;
@@ -512,5 +547,22 @@ footer {
         max-width: 200px;
         height: auto;
         display: flex;
+    }
+    .linksyear {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* Horizontal spacing adapted form: https://stackoverflow.com/questions/42789124/how-to-evenly-space-dynamic-checkboxes-bootstrap-and-icheck */
+    }
+    .linksyear>li {
+        display: inline;
+        font-size: 28px;
+    }
+    .linkyearbutton+label {
+        padding: 5px 15px;
+    }
+    li+li {
+        margin-top: 0;
     }
 }
