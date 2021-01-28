@@ -1,0 +1,568 @@
+html {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+main {
+    padding-top: 10px;
+    padding-bottom: 100px;
+    /*Adapted from https://www.w3schools.com/howto/howto_css_parallax.asp */
+    background-image: url("../../media/risingsun.png");
+    /*https://en.wikipedia.org/wiki/Rising_Sun_(badge)#/media/File:Australian_Army_Emblem.svg */
+    height: auto;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    z-index: -2;
+}
+
+article {
+    font-size: 25px;
+    font-family: Quattrocento Sans, sans-serif;
+    background-color: #0b250ed9;
+    box-sizing: border-box;
+    border-style: solid;
+    padding: 15px 10px;
+    width: auto;
+    margin: 0 13% 2%;
+    min-width: 420px;
+}
+
+article>h2 {
+    font-size: 32px;
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 27px;
+    font-family: 'Lora', serif;
+    padding-left: 10px;
+}
+
+article>p {
+    padding-left: 5px;
+}
+
+article+article {
+    clear: both;
+}
+
+article>a {
+    font-size: 28px;
+    color: #77853c;
+    text-decoration: none;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+section>ul>li>a {
+    font-size: 24px;
+    color: #77853c;
+    text-decoration: none;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+article>a:hover {
+    font-size: 26px;
+    color: #d0eb64;
+}
+
+section>ul>li>a:hover {
+    font-size: 26px;
+    color: #d0eb64;
+}
+
+article>a+p {
+    font-size: 18px;
+    margin-left: 20px;
+    padding: none;
+}
+
+#baker {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#service {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img+img {
+    margin-top: 5px;
+}
+
+img+article {
+    margin-top: 5px
+}
+
+header {
+    overflow: hidden;
+    width: 100%;
+    background-image: url("../../media/headerback.png");
+    /* Image source https://thediveo-e.blogspot.com/2015/12/e-paper-for-screencasting-sort-of.html */
+    background-size: cover;
+    background-position: center;
+}
+
+header>img {
+    float: right;
+    padding-right: 33%;
+    padding-top: 3px;
+    margin: auto
+}
+
+header>h1 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    padding-left: 33%;
+    text-align: center;
+}
+
+header>h1+h1 {
+    padding-left: 0;
+    margin: auto;
+}
+
+nav {
+    background-color: #3C441E;
+    color: white;
+    position: sticky;
+    top: 0px;
+    font-size: 23px;
+    border-radius: 5px;
+    z-index: 1;
+    font-family: 'Lora', serif;
+}
+
+nav>ul {
+    list-style: none;
+    transform: translateY(-30%);
+    transform: translateX(-40px);
+    display: flex;
+    width: 100%;
+    margin-top: 1px;
+    flex-wrap: wrap;
+}
+
+nav>ul>li {
+    min-height: 40px;
+}
+
+nav a:link,
+a:visited,
+#location {
+    width: 100%;
+    padding: 3px 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #77853c;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+nav a {
+    background-color: #3C441E;
+    color: white;
+    text-decoration: none;
+    min-height: 40px;
+}
+
+nav a:hover {
+    background-color: #c3db61;
+    color: #1b1f0f
+}
+
+#location {
+    background-color: #131309;
+}
+
+#location:hover {
+    background-color: #131309;
+    color: white;
+}
+
+.postcard>div {
+    border: 4px groove;
+    color: black;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+article.postcard div:nth-child(1) {
+    background-color: #dfd1c1;
+    border: 10px solid transparent;
+    border-image: url("../../media/cardborder.png") 30 round;
+    /* Border image from: https://dlpng.com/png/6720324 */
+    /* Border image adapted from https://www.w3schools.com/cssref/css3_pr_border-image.asp */
+}
+
+.postcard>div>img {
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.carddate {
+    text-align: right;
+    font-size: 28px;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 0;
+}
+
+.cardnote {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    background-color: #463f37;
+    border-color: white;
+    border-width: 5px;
+}
+
+.cardnote>h2 {
+    font-size: 27px;
+    font-family: 'Lora', serif;
+}
+
+.cardnote>p {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+}
+
+.cardcontent>p {
+    font-size: 25px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.cardend {
+    text-align: center;
+}
+
+.hovertip {
+    visibility: hidden;
+}
+
+.letter {
+    margin-top: 10px;
+    background-image: url("../../media/paper.png");
+    background-size: cover;
+    color: black;
+    font-family: 'Shadows Into Light', cursive;
+    border-style: solid;
+    border-color: white;
+}
+
+.letternav {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    margin-top: 5%;
+    justify-content: space-between;
+    display: flex;
+    /* Aligning 3 elements horizontally https://stackoverflow.com/questions/2603700/how-to-align-3-divs-left-center-right-inside-another-div */
+}
+
+#letterdirectory {
+    text-decoration: none;
+}
+
+#letternavl {
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+#letternavr {
+    float: right;
+    margin-right: 5%;
+    text-decoration: none;
+}
+
+.watermark {
+    opacity: 50%;
+    float: right;
+    padding-right: 10px;
+}
+
+#glossary>ul>li {
+    font-style: italic;
+    list-style: none;
+    padding-top: 8px;
+}
+
+section>h3 {
+    margin-left: 10px;
+}
+
+section>ul>li {
+    list-style: none;
+}
+
+.linksyear>li {
+    list-style: none;
+    /* Horzontal list CSS adapated from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_horizontal */
+    position: relative;
+    font-size: 28px;
+    margin: 10px auto;
+    padding: 0;
+}
+
+.linkyearbutton {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.linkyearbutton+label {
+    margin: 10px;
+    padding: 0px 25px;
+    border: 4px solid #77853c;
+    border-radius: 5px;
+    background-color: #3C441E;
+}
+
+input:checked+label {
+    background-color: #131309;
+}
+
+
+/* Button checkboxes adapted from https://stackoverflow.com/questions/15436450/style-checkboxes-as-toggle-buttons */
+
+fieldset {
+    /*Form templating adapted from https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776 */
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    display: inline-flexbox;
+    margin: auto;
+    width: 60%;
+    min-width: 350px;
+}
+
+form>fieldset>label {
+    text-align: right;
+    width: auto;
+    float: left;
+    margin-top: 10px;
+}
+
+form>fieldset>input {
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-family: Quattrocento Sans, sans-serif;
+}
+
+form>fieldset>textarea {
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-family: Quattrocento Sans, sans-serif;
+}
+
+form>input {
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin-left: 45%;
+    margin-top: 10px;
+}
+
+#message {
+    height: calc(100vmax/12);
+}
+
+footer {
+    font-size: 12px;
+    background-color: #6F7B37;
+    color: hsl(111, 25%, 80%);
+    height: fit-content;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    opacity: 90%
+}
+
+@media only screen and (min-width: 800px) {
+    header>h1+h1 {
+        padding-left: auto;
+    }
+    nav>ul {
+        flex-wrap: unset;
+    }
+    #baker {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    #service {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #baker {
+        float: left;
+        margin: 0 auto;
+        max-width: 120px;
+        height: auto;
+        width: auto;
+        display: flex;
+    }
+    #service {
+        float: right;
+        margin: 0 auto;
+        max-width: 150px;
+        height: auto;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header>img {
+        float: right;
+        padding-right: auto;
+        padding-top: 3px;
+        margin: auto;
+    }
+    header>h1 {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        padding-left: auto;
+        text-align: center;
+    }
+    header>h1+h1 {
+        padding-left: 33%;
+    }
+    article {
+        width: 70%;
+        font-size: 22px;
+    }
+    article>h2 {
+        font-size: 25px;
+    }
+    nav>ul {
+        flex-wrap: unset;
+    }
+    .hovertip {
+        visibility: visible;
+    }
+    header {
+        font-size: 30px;
+    }
+    nav>ul>li {
+        min-height: auto;
+    }
+    nav a {
+        min-height: auto;
+    }
+    article>a {
+        font-size: 25px;
+    }
+    article.postcard {
+        font-size: 22px;
+        background-color: transparent;
+        box-sizing: border-box;
+        border-style: none;
+        height: 700px;
+        width: 80%;
+        margin: 0 10%;
+        position: relative;
+    }
+    article.postcard div {
+        font-size: 22px;
+        border: 4px groove;
+        background-color: #ddd;
+        height: 700px;
+        width: 100%;
+        box-sizing: border-box;
+        border-style: none;
+        padding: 5px auto;
+        margin: 0 auto;
+        position: absolute;
+        transition: 3s;
+        backface-visibility: hidden;
+        z-index: 0;
+    }
+    article.postcard div img {
+        left: 0;
+        top: 0;
+        height: 700px;
+        position: absolute;
+    }
+    article.postcard div:nth-child(1) {
+        transform: rotateY(0deg);
+    }
+    article.postcard div:nth-child(2) {
+        transform: rotateY(180deg);
+    }
+    article.postcard:hover div:nth-child(1) {
+        transform: rotateY(180deg);
+    }
+    article.postcard:hover div:nth-child(2) {
+        transform: rotateY(360deg);
+    }
+    footer {
+        font-size: 15px;
+    }
+    #baker {
+        float: left;
+        margin: 0 auto;
+        max-width: 150px;
+        height: auto;
+        width: auto;
+        display: flex;
+    }
+    #service {
+        float: right;
+        margin: 0 auto;
+        max-width: 200px;
+        height: auto;
+        display: flex;
+    }
+    .linksyear {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* Horizontal spacing adapted form: https://stackoverflow.com/questions/42789124/how-to-evenly-space-dynamic-checkboxes-bootstrap-and-icheck */
+    }
+    .linksyear>li {
+        display: inline;
+        font-size: 28px;
+    }
+    .linkyearbutton+label {
+        padding: 5px 15px;
+    }
+    li+li {
+        margin-top: 0;
+    }
+}
