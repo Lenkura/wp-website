@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
+<?php require_once 'tools.php';?> 
+
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,13 +34,13 @@
             <a href="index.php">
                 <li>Home</li>
             </a>
-            <a href="introduction.html">
+            <a href="introduction.php">
                 <li>Introduction</li>
             </a>
-            <a href="letters.html">
+            <a href="letters.php">
                 <li>Post Card Example</li>
             </a>
-            <a href="links.html">
+            <a href="links.php">
                 <li>Document Index</li>
             </a>
             <li id='location'>Contact</li>
@@ -68,6 +71,7 @@
 
             </form>
         </article>
+        <pre><?php print_r($_POST); ?></pre>
     </main>
 
     <footer>

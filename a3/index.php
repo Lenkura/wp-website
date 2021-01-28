@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+<?php require_once 'tools.php';?> 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,16 +30,16 @@
   <nav>
     <ul>
       <li id='location'>Home</li>
-      <a href="introduction.html">
+      <a href="introduction.php">
         <li>Introduction</li>
       </a>
-      <a href="letters.html">
+      <a href="letters.php">
         <li>Post Card Example</li>
       </a>
-      <a href="links.html">
+      <a href="links.php">
         <li>Document Index</li>
       </a>
-      <a href="contact.html">
+      <a href="contact.php">
         <li>Contact</li>
       </a>
     </ul>

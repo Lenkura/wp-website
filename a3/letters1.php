@@ -32,15 +32,15 @@
             <a href="index.php">
                 <li>Home</li>
             </a>
-            <a href="introduction.html">
+            <a href="introduction.php">
                 <li>Introduction</li>
             </a>
             <li id='location'>Letters</li>
 
-            <a href="links.html">
+            <a href="links.php">
                 <li>Document Index</li>
             </a>
-            <a href="contact.html">
+            <a href="contact.php">
                 <li>Contact</li>
             </a>
         </ul>
@@ -76,9 +76,9 @@
             <!-- Letter Source: https://www.sites.google.com/site/anzacdouglasraymondbaker/letters/15_09/gallipoli-sept-4th-1915 -->
         </article>
         <article class='letternav'>
-            <a href="letters.html" id='letternavl'>Previous article</a>
-            <a href="links.html" id='letterdirectory'>Letter Directory</a>
-            <a href="letters2.html" id='letternavr'>Next article</a>
+            <a href="letters.php" id='letternavl'>Previous article</a>
+            <a href="links.php" id='letterdirectory'>Letter Directory</a>
+            <a href="letters2.php" id='letternavr'>Next article</a>
         </article>
     </main>
 

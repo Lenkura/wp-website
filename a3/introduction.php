@@ -33,13 +33,13 @@
                 <li>Home</li>
             </a>
             <li id='location'>Introduction</li>
-            <a href="letters.html">
+            <a href="letters.php">
                 <li>Post Card Example</li>
             </a>
-            <a href="links.html">
+            <a href="links.php">
                 <li>Document Index</li>
             </a>
-            <a href="contact.html">
+            <a href="contact.php">
                 <li>Contact</li>
             </a>
         </ul>

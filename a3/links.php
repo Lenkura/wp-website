@@ -32,14 +32,14 @@
             <a href="index.php">
                 <li>Home</li>
             </a>
-            <a href="Introduction.html">
+            <a href="Introduction.php">
                 <li>Introduction</li>
             </a>
-            <a href="letters.html">
+            <a href="letters.php">
                 <li>Post Card Example</li>
             </a>
             <li id='location'>Document Index</li>
-            <a href="contact.html">
+            <a href="contact.php">
                 <li>Contact</li>
             </a>
         </ul>
@@ -68,15 +68,15 @@
             <section>
                 <h3>1914</h3>
                 <ul>
-                    <li><a href='letters.html'>[Post Card] August 25th 1914.</a></li>
-                    <li><a href='letters2.html'>[Post Card] August 31st 1914.</a></li>
-                    <li><a href='letters4.html'>[Post Card] October 23rd 1914.</a></li>
+                    <li><a href='letters.php'>[Post Card] August 25th 1914.</a></li>
+                    <li><a href='letters2.php'>[Post Card] August 31st 1914.</a></li>
+                    <li><a href='letters4.php'>[Post Card] October 23rd 1914.</a></li>
                 </ul>
             </section>
             <section>
                 <h3>1915</h3>
                 <ul>
-                    <li><a href='letters1.html'>[Letter] 4th September 1915.</a></li>
+                    <li><a href='letters1.php'>[Letter] 4th September 1915.</a></li>
                     <li><a href=''>[Filler doc] link does not work</a></li>
                     <li><a href=''>[Filler doc] link does not work</a></li>
                 </ul>
@@ -84,7 +84,7 @@
             <section>
                 <h3>1916</h3>
                 <ul>
-                    <li> <a href='letters3.html'>[Letter] 2nd February 1916.</a></li>
+                    <li> <a href='letters3.php'>[Letter] 2nd February 1916.</a></li>
                     <li><a href=''>[Filler doc] link does not work</a></li>
                     <li><a href=''>[Filler doc] link does not work</a></li>
                 </ul>
@@ -100,7 +100,7 @@
             <section>
                 <h3>1918</h3>
                 <ul>
-                    <li> <a href='letters5.html'>[Letter] 12th January 1918.</a></li>
+                    <li> <a href='letters5.php'>[Letter] 12th January 1918.</a></li>
                     <li><a href=''>[Filler doc] link does not work</a></li>
                     <li><a href=''>[Filler doc] link does not work</a></li>
                 </ul>
