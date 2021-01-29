@@ -1,36 +1,16 @@
 <!DOCTYPE html>
 <html lang='en'>
-<?php require_once('tools.php'); ?>
+<?php require_once('tools.php'); 
+start_module("Home");
+?>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assignment 2 - Home</title>
 
-  <!-- Keep wireframe.css for debugging, add your css to style.css -->
-  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>
-  <script src='../wireframe.js'></script>
-
-    <link rel=" preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <header>
-    <img src='../../media/drbakersmol.png' alt='Douglas Raymond Baker'>
-    <h1>Douglas Raymond Baker</h1>
-    <h1>An ANZAC Letter Collection</h1>
-  </header>
 
   <nav>
     <ul>
-      <li id='location'>Home</li>
+    <a href="index.php">
+                <li>Home</li>
+            </a>
       <a href="introduction.php">
         <li>Introduction</li>
       </a>
