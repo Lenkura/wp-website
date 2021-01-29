@@ -51,6 +51,14 @@ function start_module($pageTitle) {
     <h1>Douglas Raymond Baker</h1>
     <h1>An ANZAC Letter Collection</h1>
   </header>
+  <nav>
+  <ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="introduction.php">Introduction</a></li>
+    <li><a href="links.php"> Document Index</a></li>
+    <li><a href="contact.php">Contact</a></li>
+  </ul>
+</nav>
 HEADER;
   echo $header;
 }
