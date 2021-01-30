@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -56,15 +58,20 @@
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker">
+                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker" required>
+                    <p class='contacterror'>Names Must be Letters and Punctuation Only</p>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Douglas@email.com">
+                    <input type="email" id="email" name="email" placeholder="Douglas@email.com" required>
+                    <p class='contacterror'>An Email is Required</p>
                     <label for="mobile">Mobile</label>
                     <input type="text" id="mobile" name="mobile" placeholder="1234567890">
+                    <p class='contacterror'>Australian Phone Numbers Only</p>
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Reason for contact">
+                    <input type="text" id="subject" name="subject" placeholder="Reason for contact" required>
+                    <p class='contacterror'>Please Enter a Reason for Contact</p>
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform"></textarea>
+                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform" required></textarea>
+                    <p class='contacterror' id='contactmessageerror'>Please Enter a Message</p>
                 </fieldset>
                 <input type='checkbox' id='remember' name='remember' value='remember' />
                 <label id='rememberlabel' for="remember">Remember Me</label>

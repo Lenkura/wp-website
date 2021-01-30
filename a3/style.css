@@ -357,22 +357,21 @@ input:checked+label {
 fieldset {
     /*Form templating adapted from https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776 */
     display: grid;
-    grid-template-columns: 25% 1fr;
+    grid-template-columns: 20% 50% 1fr;
     display: inline-flexbox;
     margin: auto;
-    width: 60%;
+    width: 70%;
     min-width: 350px;
 }
 
 form>fieldset>label {
     text-align: right;
     width: auto;
-    float: left;
-    margin-top: 10px;
+    margin: auto 0;
 }
 
 form>fieldset>input {
-    width: 80%;
+    width: 100%;
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 3px;
@@ -380,7 +379,7 @@ form>fieldset>input {
 }
 
 form>fieldset>textarea {
-    width: 80%;
+    width: 100%;
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 3px;
@@ -392,6 +391,25 @@ form>input {
     border-radius: 5px;
     margin-left: 45%;
     margin-top: 10px;
+}
+
+.contacterror {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    background-color: #ffff;
+    border-style: solid;
+    color: #ac0a0a;
+    margin: 5px auto;
+    padding: 0;
+    width: 80%;
+    transform: translateY(5px);
+    padding: 3px;
+    height: auto;
+    /*visibility: hidden; */
+}
+
+#contactmessageerror {
+    height: calc(100%/5);
 }
 
 #message {
