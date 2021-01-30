@@ -405,10 +405,10 @@ form>input {
     transform: translateY(5px);
     padding: 3px;
     height: auto;
-    /*visibility: hidden; */
+    visibility: hidden;
 }
 
-#contactmessageerror {
+#messageerror {
     height: calc(100%/5);
 }
 

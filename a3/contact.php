@@ -13,6 +13,7 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime(" style.css "); ?>">
     <script src='../wireframe.js'></script>
+    <script src='script.js'></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
@@ -58,20 +59,25 @@
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker" required>
-                    <p class='contacterror'>Names Must be Letters and Punctuation Only</p>
+                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker" required onchange="nameerror()">
+
+                    <p class='contacterror' id='nameerror'>Names Must be Letters and Punctuation Only</p>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Douglas@email.com" required>
-                    <p class='contacterror'>An Email is Required</p>
+                    <input type="email" id="email" name="email" placeholder="Douglas@email.com" required onchange="emailerror()">
+                    <p class='contacterror' id='emailerror'>Please Enter Valid Email</p>
+
                     <label for="mobile">Mobile</label>
-                    <input type="text" id="mobile" name="mobile" placeholder="1234567890">
-                    <p class='contacterror'>Australian Phone Numbers Only</p>
+                    <input type="text" id="mobile" name="mobile" placeholder="0412345678" onchange="mobileerror()">
+                    <p class='contacterror' id='mobileerror'>Australian Phone Numbers Only</p>
+
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Reason for contact" required>
-                    <p class='contacterror'>Please Enter a Reason for Contact</p>
+                    <input type="text" id="subject" name="subject" placeholder="Reason for contact" required onchange="subjecterror()">
+                    <p class='contacterror' id='subjecterror'>Please Enter a Reason for Contact</p>
+
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform" required></textarea>
-                    <p class='contacterror' id='contactmessageerror'>Please Enter a Message</p>
+                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform" required onchange="messageerror()"></textarea>
+                    <p class='contacterror' id='messageerror'>Please Enter a Message</p>
+
                 </fieldset>
                 <input type='checkbox' id='remember' name='remember' value='remember' />
                 <label id='rememberlabel' for="remember">Remember Me</label>
