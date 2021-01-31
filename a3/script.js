@@ -61,3 +61,10 @@ function messageerror() {
     }
 
 }
+
+function linksviewyear(year) {
+    if (document.getElementById(year).checked == false)
+        document.getElementById(year + "links").style.display = "none"
+    else
+        document.getElementById(year + "links").style.display = "inherit"
+}
