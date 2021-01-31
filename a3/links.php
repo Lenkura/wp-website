@@ -1,50 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Letter Index</title>
-
-    <!-- Keep wireframe.css for debugging, add your css to style.css -->
-    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime(" style.css "); ?>">
-    <script src='../wireframe.js'></script>
-    <script src='script.js'></script>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-    <header>
-        <img src='../../media/drbakersmol.png' alt='Douglas Raymond Baker'>
-        <h1>Douglas Raymond Baker</h1>
-        <h1>An ANZAC Letter Collection</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <a href="index.php">
-                <li>Home</li>
-            </a>
-            <a href="Introduction.php">
-                <li>Introduction</li>
-            </a>
-            <a href="letters.php">
-                <li>Post Card Example</li>
-            </a>
-            <li id='location'>Document Index</li>
-            <a href="contact.php">
-                <li>Contact</li>
-            </a>
-        </ul>
-    </nav>
+<?php require_once('tools.php');
+start_module("Home");
+?>
 
     <main>
         <article>
