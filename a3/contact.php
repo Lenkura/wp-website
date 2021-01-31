@@ -32,11 +32,11 @@ start_module("Home");
                     <p class='contacterror' id='messageerror'>Please Enter a Message</p>
 
                 </fieldset>
-                <input type='checkbox' id='remember' name='remember' value='remember' />
+                <input type='checkbox' id='remember' name='remember' value='remember' onclick="rememberme()"/>
                 <label id='rememberlabel' for="remember">Remember Me</label>
                 <input type="submit" value="Submit">
-
             </form>
         </article>
         <pre><?php print_r($_POST); ?></pre>
         <?php end_module(); ?>
+        <script>retrieverememberme()</script>

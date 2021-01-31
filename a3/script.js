@@ -68,3 +68,28 @@ function linksviewyear(year) {
     else
         document.getElementById(year + "links").style.display = "inherit"
 }
+
+function rememberme() {
+    if (document.getElementById("remember").checked == true) {
+        if (typeof(Storage) !== 'undefined') {
+            localStorage.setItem('name', document.getElementById("name").value);
+            localStorage.setItem('mobile', document.getElementById("mobile").value);
+            localStorage.setItem('email', document.getElementById("email").value);
+            localStorage.setItem('rememberme', "checked");
+        }
+    } else
+    if (typeof(Storage) !== 'undefined') {
+        localStorage.removeItem('name');
+        localStorage.removeItem('mobile');
+        localStorage.removeItem('email');
+        localStorage.removeItem('rememberme');
+    }
+}
+
+function retrieverememberme() {
+    if (localStorage.rememberme == 'checked') {
+        document.getElementById('name').value = localStorage.name;
+        document.getElementById('mobile').value = localStorage.mobile;
+        document.getElementById('email').value = localStorage.email;
+    }
+}
