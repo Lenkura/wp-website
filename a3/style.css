@@ -368,14 +368,18 @@ form>fieldset>label {
     text-align: right;
     width: auto;
     margin: auto 0;
+    height: 100%;
 }
 
 form>fieldset>input {
     width: 100%;
+    height: auto;
+    padding: 10px 0;
+    margin: 5px 0;
     margin-left: 10px;
-    margin-top: 10px;
     border-radius: 3px;
     font-family: Quattrocento Sans, sans-serif;
+    font-size: 13px;
 }
 
 form>fieldset>textarea {
@@ -402,7 +406,6 @@ form>input {
     margin: 5px auto;
     padding: 0;
     width: 80%;
-    transform: translateY(5px);
     padding: 3px;
     height: auto;
     visibility: hidden;
