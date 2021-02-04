@@ -8,7 +8,7 @@ start_module("Home");
         <article>
             <h1>Contact</h1>
             <p>If you would like to reach us for any reason, please fill out the following form</p>
-            <form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="POST" target='_blank' id='contactform'>
+            <form action="post-validation.php" method="POST" target='' id='contactform'>
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label for="name">Name</label>
