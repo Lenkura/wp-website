@@ -9,11 +9,12 @@ start_module("Home");
         <article>
             <h1>Contact</h1>
             <p>If you would like to reach us for any reason, please fill out the following form</p>
+            <?=$message?>
             <form action="contact.php" method="POST" target='' id='contactform'>
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker" required onchange="nameerror()">
+                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker" required onchange="nameerror()" value="<?=$_POST["name"]?>">
 
                     <p class='contacterror' id='nameerror'></p><?=$nameError?>
                     <label for="email">Email</label>
@@ -21,21 +22,23 @@ start_module("Home");
                     <p class='contacterror' id='emailerror'></p><?=$emailError?>
 
                     <label for="mobile">Mobile</label>
-                    <input type="text" id="mobile" name="mobile" placeholder="0412345678" onchange="mobileerror()">
+                    <input type="text" id="mobile" name="mobile" placeholder="0412345678" onchange="mobileerror()" value="<?=$_POST["mobile"]?>">
                     <p class='contacterror' id='mobileerror'></p><?=$mobileError?>
 
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Reason for contact" required onchange="subjecterror()">
+                    <input type="text" id="subject" name="subject" placeholder="Reason for contact" required onchange="subjecterror()" value="<?=$_POST["subject"]?>">
                     <p class='contacterror' id='subjecterror'></p><?=$subjectError?>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform" required onchange="messageerror()"></textarea>
+                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform" required onchange="messageerror()"><?=$_POST["message"]?></textarea>
                     <p class='contacterror' id='messageerror'></p><?=$messageError?>
 
                 </fieldset>
                 <input type='checkbox' id='remember' name='remember' value='remember' onclick="rememberme()"/>
                 <label id='rememberlabel' for="remember">Remember Me</label>
-                <span id=forminvalid></span>
+                <input type='checkbox' id='novalid' name='novalid' onclick="document.getElementById('contactform').noValidate = this.checked;">
+                <label id='novalidlable' for="novalid">Disable client side validation</label>
+                
                 <input type="submit" value="Submit">
             </form>
         </article>

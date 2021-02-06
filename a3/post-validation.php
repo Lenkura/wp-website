@@ -10,7 +10,6 @@ $errorsfound = false;
 
 if (!empty($_POST)) {
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     if (!isset($_POST["name"])) {
       $nameError = '<span></span><span style="color:red; font-size:15px;">Name cannot be blank</span><span></span>';
       $errorsFound = true;
@@ -27,10 +26,10 @@ if (!empty($_POST)) {
       $errorsFound = true;
     } else
   if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-      $emailError = '<span></span><span style="color:red; font-size:15px;">Incorrect email format</span><span></span>';
+      $emailError = '<span></span><span style="color:red; font-size:15px;">Incorrect email format, Did you mean to enter this?</span><span></span>';
       $errorsFound = true;
       $cleanEmail = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-      //Present adjusted email to user
+    
     }
 
     if (!isset($_POST["mobile"])) {
@@ -58,7 +57,7 @@ if (!empty($_POST)) {
 
 
     if ($errorsFound) {
-      $message = "There are errors in your form, please try again";
+      $message = '<span style="color:red; font-size:20px;">There are errors in your form, please try again</span>';
 
       // Present to user
     }
