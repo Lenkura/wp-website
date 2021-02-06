@@ -36,7 +36,7 @@ start_module("Home");
                 <h3>1915</h3>
                 <ul>
                     <li><a href='letters1.php'>[Letter] 4th September 1915.</a></li>
-                    <li><a href=''>[Filler doc] link does not work</a></li>
+                    <li><a href='dynamiccontenttest.php'>Dyanimcontent TEst</a></li>
                     <li><a href=''>[Filler doc] link does not work</a></li>
                 </ul>
             </section>

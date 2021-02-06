@@ -1,14 +1,15 @@
 <?php
-  session_start();
-  
-error_reporting( E_ERROR | E_WARNING | E_PARSE );
+session_start();
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 
-function end_module() {
+function end_module()
+{
   $footer = <<<'FOOTER'
   </main>
   <footer>
-    <img src='../../media/Poppy.png' alt='Poppy' class='watermark' /> <!-- image source : http://clipart-library.com/poppy-cliparts.html */ -->
+    <img src="../../media/Poppy.png" alt='Poppy' class='watermark' /> <!-- image source : http://clipart-library.com/poppy-cliparts.html */ -->
     <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Raymond Louey s3853718  https://github.com/Lenkura/wp Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. </div>
@@ -24,7 +25,8 @@ FOOTER;
   echo $footer;
 }
 
-function start_module($pageTitle) {
+function start_module($pageTitle)
+{
   $header = <<<"HEADER"
   <head>
   <meta charset="utf-8">
@@ -64,6 +66,61 @@ function start_module($pageTitle) {
 </nav>
 HEADER;
   echo $header;
+}
+//File Reader
+function beep(){
+  echo "<p>This is a test</p>";
+}
+function dynamiccontent()
+{
+
+  if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
+    $headings = fgetcsv($fp, 0, "\t");
+    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false)
+      $records[] = $aLineOfCells;
+    flock($fp, LOCK_UN);
+    fclose($fp);
+    print_r($headings);
+    print_r($records[0][2]);
+    echo "<p>{$records[0][0]}</p>";
+    echo "<p>{$records[0][7]}</p>";
+  }
+}
+
+function letter($num)
+{
+  if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
+    $headings = fgetcsv($fp, 0, "\t");
+    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false)
+      $records[] = $aLineOfCells;
+    flock($fp, LOCK_UN);
+    fclose($fp);
+    $date = $records[$num][0];
+    $datec = date_create($records[$num][0]);
+    $formateddate = date_format($datec, "dS F Y");
+    $content = $records[$num][7];
+    $postcard = <<<"BLOCK"
+    <article class='cardnote'>
+    <h2>[Post Card] $formateddate.</h2>
+   <p> On the first page of the exercise book Aunt Alice has written:- Book No. 1 written by Alice Baker. Letters received from D. R. Baker after his enlistment for the war Sept. 1914.
+           </p>
+           <p class='hovertip'>Hover over the card for a map</p>
+       </article>
+       <article class='postcard'>
+           <div>
+               <p class='carddate'>$date.</p>
+               <section class='cardcontent'>
+                   <p>$content</p>
+               </section>
+               <p class='cardend'>*********************************</p>
+           </div>
+           <!-- Card Source: https://www.sites.google.com/site/anzacdouglasraymondbaker/letters/14_08/post-card-august-25th-1914 -->
+           <div><img src='../../media/Cairomap.png' /></div>
+           <!-- image source : Google Maps -->
+       </article>
+BLOCK;
+    echo $postcard;
+  }
 }
 
 ?>
