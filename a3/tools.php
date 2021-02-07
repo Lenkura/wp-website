@@ -73,33 +73,50 @@ function beep(){
 }
 function dynamiccontent()
 {
-
+  $correspondence = $headings = array();
+  $i = 0;
   if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
-    $headings = fgetcsv($fp, 0, "\t");
-    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false)
-      $records[] = $aLineOfCells;
+    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false){
+      if (empty($headings)) {
+        $headings = $aLineOfCells;
+        continue;
+      }
+      foreach ($aLineOfCells as $k=>$value) {
+        $correspondence[$i][$headings[$k]] = $value;
+    }
+    $i++;
+    }
     flock($fp, LOCK_UN);
     fclose($fp);
     print_r($headings);
-    print_r($records[0][2]);
-    echo "<p>{$records[0][0]}</p>";
-    echo "<p>{$records[0][7]}</p>";
-  }
+    echo "<p>{$correspondence[0][Content]}</p>";
+    // echo "<p>{$array[0][7]}</p>";
+  
 }
-
+}
+//adapted from https://stackoverflow.com/questions/4801895/csv-to-associative-array
 function letter($num)
 {
+  $correspondence = $headings = array();
+  $i = 0;
   if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
-    $headings = fgetcsv($fp, 0, "\t");
-    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false)
-      $records[] = $aLineOfCells;
+    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false){
+      if (empty($headings)) {
+        $headings = $aLineOfCells;
+        continue;
+      }
+      foreach ($aLineOfCells as $k=>$value) {
+        $correspondence[$i][$headings[$k]] = $value;
+    }
+    $i++;
+    }
     flock($fp, LOCK_UN);
     fclose($fp);
-    $date = $records[$num][0];
-    $datec = date_create($records[$num][0]);
+    $date = $correspondence[$num]["DateStart"];
+    $datec = date_create($correspondence[$num]["DateStart"]);
     $formateddate = date_format($datec, "dS F Y");
-    $content = $records[$num][7];
-    if ($records[$num][2] == 'Postcard') {
+    $content = $correspondence[$num]["Content"];
+    if ($correspondence[$num]["Type"] == 'Postcard') {
     $postcard = <<<"BLOCK"
     <main>
     <article class='cardnote'>
@@ -121,7 +138,7 @@ function letter($num)
            <!-- image source : Google Maps -->
        </article>
 BLOCK;
-    echo $postcard; } else if ($records[$num][2] == 'Letter'){
+    echo $postcard; } else if ($correspondence[$num]["Type"] == 'Letter'){
       $letter = <<<"BLOCK"
       <main>
         <article class='cardnote'>
