@@ -99,7 +99,9 @@ function letter($num)
     $datec = date_create($records[$num][0]);
     $formateddate = date_format($datec, "dS F Y");
     $content = $records[$num][7];
+    if ($records[$num][2] == 'Postcard') {
     $postcard = <<<"BLOCK"
+    <main>
     <article class='cardnote'>
     <h2>[Post Card] $formateddate.</h2>
    <p> On the first page of the exercise book Aunt Alice has written:- Book No. 1 written by Alice Baker. Letters received from D. R. Baker after his enlistment for the war Sept. 1914.
@@ -119,7 +121,23 @@ function letter($num)
            <!-- image source : Google Maps -->
        </article>
 BLOCK;
-    echo $postcard;
+    echo $postcard; } else if ($records[$num][2] == 'Letter'){
+      $letter = <<<"BLOCK"
+      <main>
+        <article class='cardnote'>
+            <h2>[Letter] $formateddate.</h2>
+        </article>
+        <article class='letter'>
+            <p class='carddate'>$date.</p>
+            <section class='lettercontent'>$content</section>
+            <p class='cardend'>*********************************</p>
+            <!-- Letter Source: https://www.sites.google.com/site/anzacdouglasraymondbaker/letters/15_09/gallipoli-sept-4th-1915 -->
+        </article>
+BLOCK;
+        echo $letter;
+
+
+    }
   }
 }
 

@@ -2,10 +2,10 @@
 <html lang='en'>
 <?php require_once('tools.php');
 start_module("Home");
-
+letter(5);
 ?>
-<main>
-<?php letter(0);?>
+
+
 
         <article class='letternav'>
             <a href="letters5.php" id='letternavl'>Previous article</a>
