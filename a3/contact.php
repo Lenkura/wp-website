@@ -14,7 +14,7 @@ start_module("Home");
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker" required onchange="nameerror()" value="<?=$_POST["name"]?>">
+                    <input type="text" id="name" name="name" placeholder="Douglas Raymond Baker" required onchange="nameerror()" value="<?=$returnname?>">
 
                     <p class='contacterror' id='nameerror'></p><?=$nameError?>
                     <label for="email">Email</label>
@@ -22,15 +22,15 @@ start_module("Home");
                     <p class='contacterror' id='emailerror'></p><?=$emailError?>
 
                     <label for="mobile">Mobile</label>
-                    <input type="text" id="mobile" name="mobile" placeholder="0412345678" onchange="mobileerror()" value="<?=$_POST["mobile"]?>">
+                    <input type="text" id="mobile" name="mobile" placeholder="0412345678" onchange="mobileerror()" value="<?=$returnmobile?>">
                     <p class='contacterror' id='mobileerror'></p><?=$mobileError?>
 
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Reason for contact" required onchange="subjecterror()" value="<?=$_POST["subject"]?>">
+                    <input type="text" id="subject" name="subject" placeholder="Reason for contact" required onchange="subjecterror()" value="<?=$returnsubject?>">
                     <p class='contacterror' id='subjecterror'></p><?=$subjectError?>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform" required onchange="messageerror()"><?=$_POST["message"]?></textarea>
+                    <textarea id="message" name="message" placeholder="Enter your message" form="contactform" required onchange="messageerror()"><?=$returnmessage?></textarea>
                     <p class='contacterror' id='messageerror'></p><?=$messageError?>
 
                 </fieldset>

@@ -19,6 +19,7 @@ if (!empty($_POST)) {
     if (!preg_match("/^[-a-zA-Z ,.']+$/", $_POST["name"])) {
       $nameError = '<span></span><span style="color:red; font-size:15px;">Name contains unacceptable characters</span><span></span>';
       $errorsFound = true;
+      $returnname = $_POST["name"];
     }
     
     if (!isset($_POST["email"])) {
@@ -39,28 +40,33 @@ if (!empty($_POST)) {
   if (!preg_match("/^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$/", $_POST["mobile"])) {
       $mobileError = '<span></span><span style="color:red; font-size:15px;">Non Australian number entered</span><span></span>';
       $errorsFound = true;
+      $returnmobile = $_POST["mobile"];
     }
 
     if (!isset($_POST["subject"])) {
       $subjectError = '<span></span><span style="color:red; font-size:15px;">Subject cannot be blank</span><span></span>';
       $errorsFound = true;
+      $returnsubject = $_POST["subject"];
     } else
-      $cleansubject = htmlentities($_POST["subject"]);
+      $_POST["subject"] = htmlentities($_POST["subject"]);
 
     if (!isset($_POST["message"])) {
       $messageError = '<span></span><span style="color:red; font-size:15px;">Message cannot be blank</span><span></span>';
       $errorsFound = true;
+      $returnmessage = $_POST["message"];
     } else
-      $cleanmessage = htmlentities($_POST["message"]);
+      $_POST["message"] = htmlentities($_POST["message"]);
 
-    //Present errors to user
 
 
     if ($errorsFound) {
       $message = '<span style="color:red; font-size:20px;">There are errors in your form, please try again</span>';
-
-      // Present to user
     }
+
+      }
+
+      
+    
   }
 }
 // $post = print_r($_POST, true);
