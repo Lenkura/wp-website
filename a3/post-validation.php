@@ -8,8 +8,9 @@ $subjectError = '';
 $messageError = '';
 $errorsfound = false;
 
-if (!empty($_POST)) {
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (!empty($_POST)) {
     if (!isset($_POST["name"])) {
       $nameError = '<span></span><span style="color:red; font-size:15px;">Name cannot be blank</span><span></span>';
       $errorsFound = true;
@@ -72,7 +73,7 @@ if (!empty($_POST)) {
         flock($fp, LOCK_UN);
         fclose($fp);
       }
-      $message = '<span style="font-size:20px;">  Message Recieved. Thanks for getting in touch.</span>';
+      $message = '<span style="font-size:20px; font-weight:bold;">  Message Recieved. Thanks for getting in touch.</span>';
     }
   }
 }
