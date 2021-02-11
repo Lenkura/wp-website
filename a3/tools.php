@@ -68,7 +68,8 @@ HEADER;
   echo $header;
 }
 //File Reader
-function beep(){
+function beep()
+{
   echo "<p>This is a test</p>";
 }
 function dynamiccontent()
@@ -76,23 +77,24 @@ function dynamiccontent()
   $correspondence = $headings = array();
   $i = 0;
   if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
-    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false){
+    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false) {
       if (empty($headings)) {
         $headings = $aLineOfCells;
         continue;
       }
-      foreach ($aLineOfCells as $k=>$value) {
+      foreach ($aLineOfCells as $k => $value) {
         $correspondence[$i][$headings[$k]] = $value;
-    }
-    $i++;
+      }
+      $i++;
     }
     flock($fp, LOCK_UN);
     fclose($fp);
     print_r($headings);
+    $location = $correspondence[5]["Town"] . "map.PNG";
+    echo "<p>$location</p>";
+    print_r($correspondence[0]);
     echo "<p>{$correspondence[0][Content]}</p>";
-    // echo "<p>{$array[0][7]}</p>";
-  
-}
+  }
 }
 //adapted from https://stackoverflow.com/questions/4801895/csv-to-associative-array
 function letter($num)
@@ -100,15 +102,15 @@ function letter($num)
   $correspondence = $headings = array();
   $i = 0;
   if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
-    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false){
+    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false) {
       if (empty($headings)) {
         $headings = $aLineOfCells;
         continue;
       }
-      foreach ($aLineOfCells as $k=>$value) {
+      foreach ($aLineOfCells as $k => $value) {
         $correspondence[$i][$headings[$k]] = $value;
-    }
-    $i++;
+      }
+      $i++;
     }
     flock($fp, LOCK_UN);
     fclose($fp);
@@ -116,8 +118,11 @@ function letter($num)
     $datec = date_create($correspondence[$num]["DateStart"]);
     $formateddate = date_format($datec, "dS F Y");
     $content = $correspondence[$num]["Content"];
+    if ($correspondence[$num]["Town"] == "")
+      $location = "nolocation.png";
+    else $location = $correspondence[$num]["Town"] . "map.png";
     if ($correspondence[$num]["Type"] == 'Postcard') {
-    $postcard = <<<"BLOCK"
+      $postcard = <<<"BLOCK"
     <main>
     <article class='cardnote'>
     <h2>[Post Card] $formateddate.</h2>
@@ -133,12 +138,13 @@ function letter($num)
                </section>
                <p class='cardend'>*********************************</p>
            </div>
-           <!-- Card Source: https://www.sites.google.com/site/anzacdouglasraymondbaker/letters/14_08/post-card-august-25th-1914 -->
-           <div><img src='../../media/Cairomap.png' /></div>
+           <!-- Card Source: https://www.sites.google.com/site/anzacdouglasraymondbaker/letters -->
+           <div><img src='../../media/$location' /></div>
            <!-- image source : Google Maps -->
        </article>
 BLOCK;
-    echo $postcard; } else if ($correspondence[$num]["Type"] == 'Letter'){
+      echo $postcard;
+    } else if ($correspondence[$num]["Type"] == 'Letter') {
       $letter = <<<"BLOCK"
       <main>
         <article class='cardnote'>
@@ -148,14 +154,10 @@ BLOCK;
             <p class='carddate'>$date.</p>
             <section class='lettercontent'>$content</section>
             <p class='cardend'>*********************************</p>
-            <!-- Letter Source: https://www.sites.google.com/site/anzacdouglasraymondbaker/letters/15_09/gallipoli-sept-4th-1915 -->
+            <!-- Letter Source: https://www.sites.google.com/site/anzacdouglasraymondbaker/letters -->
         </article>
 BLOCK;
-        echo $letter;
-
-
+      echo $letter;
     }
   }
 }
-
-?>
