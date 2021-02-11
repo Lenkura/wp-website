@@ -21,7 +21,7 @@ if (!empty($_POST)) {
       $errorsFound = true;
       $returnname = $_POST["name"];
     }
-    
+
     if (!isset($_POST["email"])) {
       $emailError = '<span></span><span style="color:red; font-size:15px;">Email cannot be blank</span><span></span>';
       $errorsFound = true;
@@ -29,8 +29,9 @@ if (!empty($_POST)) {
   if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
       $emailError = '<span></span><span style="color:red; font-size:15px;">Incorrect email format, Did you mean to enter this?</span><span></span>';
       $errorsFound = true;
-      $cleanEmail = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-    
+      if ($errorsFound = true) {
+        $cleanEmail = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+      }
     }
 
     if (!isset($_POST["mobile"])) {
@@ -40,12 +41,15 @@ if (!empty($_POST)) {
   if (!preg_match("/^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$/", $_POST["mobile"])) {
       $mobileError = '<span></span><span style="color:red; font-size:15px;">Non Australian number entered</span><span></span>';
       $errorsFound = true;
-      $returnmobile = $_POST["mobile"];
+      if ($errorsFound = true) {
+        $returnmobile = $_POST["mobile"];
+      }
     }
 
     if (!isset($_POST["subject"])) {
       $subjectError = '<span></span><span style="color:red; font-size:15px;">Subject cannot be blank</span><span></span>';
       $errorsFound = true;
+    } else if ($errorsFound = true) {
       $returnsubject = $_POST["subject"];
     } else
       $_POST["subject"] = htmlentities($_POST["subject"]);
@@ -53,6 +57,7 @@ if (!empty($_POST)) {
     if (!isset($_POST["message"])) {
       $messageError = '<span></span><span style="color:red; font-size:15px;">Message cannot be blank</span><span></span>';
       $errorsFound = true;
+    } else if ($errorsFound = true) {
       $returnmessage = $_POST["message"];
     } else
       $_POST["message"] = htmlentities($_POST["message"]);
@@ -62,11 +67,6 @@ if (!empty($_POST)) {
     if ($errorsFound) {
       $message = '<span style="color:red; font-size:20px;">There are errors in your form, please try again</span>';
     }
-
-      }
-
-      
-    
   }
 }
 // $post = print_r($_POST, true);
