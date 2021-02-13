@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $errorsFound = true;
     }
     if (!preg_match("/^[-a-zA-Z ,.']+$/", $_POST["name"])) {
-      $nameError = '<span></span><span style="color:red; font-size:15px;">Name contains unacceptable characters</span><span></span>';
+      $nameError = '<span></span><span style="color:red; font-size:15px;">Name contains unacceptable characters. Letters and "-,.\'" only</span><span></span>';
       $errorsFound = true;
       $returnname = $_POST["name"];
     }
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $errorsFound = true;
     } else
   if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-      $emailError = '<span></span><span style="color:red; font-size:15px;">Incorrect email format, Did you mean to enter this?</span><span></span>';
+      $emailError = '<span></span><span style="color:red; font-size:15px;">Incorrect email format, did you mean to enter this?</span><span></span>';
       $errorsFound = true;
     }
     if ($errorsFound == true) {
