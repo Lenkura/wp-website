@@ -3,6 +3,10 @@ session_start();
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
+$here = $_SERVER['SCRIPT_NAME'];
+$bits = explode('/',$here);
+$filename = $bits[count($bits)-1];
+echo "<style>nav a[href$='$filename'] { background-color: #1f2503; }</style>";
 
 function end_module()
 {
