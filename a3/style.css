@@ -114,7 +114,7 @@ header>img {
     float: right;
     padding-right: 33%;
     padding-top: 3px;
-    margin: auto
+    margin: auto;
 }
 
 header>h1 {
@@ -129,6 +129,43 @@ header>h1+h1 {
     padding-left: 0;
     margin: auto;
 }
+
+.login {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    float: right;
+}
+
+.login label {
+    font-size: 25px;
+    margin: 5px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.login span {
+    font-size: 25px;
+    margin: 5px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.login input {
+    vertical-align: middle;
+    margin: 4px 10px 5px 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.login button {
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/*Login framework adapted from https://www.w3schools.com/howto/howto_css_inline_form.asp */
 
 nav {
     color: white;

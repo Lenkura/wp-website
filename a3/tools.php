@@ -4,8 +4,8 @@ session_start();
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 $here = $_SERVER['SCRIPT_NAME'];
-$bits = explode('/',$here);
-$filename = $bits[count($bits)-1];
+$bits = explode('/', $here);
+$filename = $bits[count($bits) - 1];
 echo "<style>nav a[href$='$filename'] { background-color: #1f2503; }</style>";
 
 function end_module()
@@ -51,14 +51,24 @@ function start_module($pageTitle)
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
 
   <header>
-    <img src='../../media/drbakersmol.png' alt='Douglas Raymond Baker'>
+  <img src='../../media/drbakersmol.png' alt='Douglas Raymond Baker'>
     <h1>Douglas Raymond Baker</h1>
     <h1>An ANZAC Letter Collection</h1>
+     <form class="login" action="">
+      <label>Sign In</label>
+      <input type=text name=user placeholder="Username">
+      <input type=text name=pass placeholder="Password">
+      <button type="submit" name=login>Log In</button>
+    </form>
+    <!--<div class=login><span>Logged in as Bob</span>
+    <button type="submit" name=login>Log out</button></div> -->
   </header>
   <nav>
   <ul>
