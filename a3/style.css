@@ -135,6 +135,7 @@ header>h1+h1 {
     flex-flow: row wrap;
     align-items: center;
     float: right;
+    max-width: 25%;
 }
 
 .login label {
@@ -162,6 +163,12 @@ header>h1+h1 {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+#loginfail {
+    font-size: 20px;
+    color: #fd0000;
+    flex-wrap: wrap;
 }
 
 

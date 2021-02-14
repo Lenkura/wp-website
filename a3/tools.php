@@ -31,6 +31,28 @@ FOOTER;
 
 function start_module($pageTitle)
 {
+  if (isset($_SESSION['message']))
+  {
+      $loginfail =  $_SESSION['message'];
+      unset($_SESSION['message']);
+  }
+  
+  $user = $_SESSION["user"]["username"];
+  if (isset($_SESSION["user"])) {
+    $login = "<form class='login' method='POST' action='login.php'>
+    <span>Logged in as $user <span>
+    <button type='submit' name=login>Log Out</button>
+  </form>";
+  } else {
+    $login = "<form class='login' method='POST' action='login.php'>
+   <label>Sign In</label>
+   <input type=text name=username placeholder='Username'>
+   <input type=text name=pass placeholder='Password'>
+   <button type='submit' name=login>Log In</button>
+   <span id='loginfail'>$loginfail</span>
+  </form>";
+  }
+
   $header = <<<"HEADER"
   <head>
   <meta charset="utf-8">
@@ -61,14 +83,7 @@ function start_module($pageTitle)
   <img src='../../media/drbakersmol.png' alt='Douglas Raymond Baker'>
     <h1>Douglas Raymond Baker</h1>
     <h1>An ANZAC Letter Collection</h1>
-     <form class="login" action="">
-      <label>Sign In</label>
-      <input type=text name=user placeholder="Username">
-      <input type=text name=pass placeholder="Password">
-      <button type="submit" name=login>Log In</button>
-    </form>
-    <!--<div class=login><span>Logged in as Bob</span>
-    <button type="submit" name=login>Log out</button></div> -->
+    $login
   </header>
   <nav>
   <ul>
