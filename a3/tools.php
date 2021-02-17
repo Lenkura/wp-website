@@ -40,15 +40,16 @@ function start_module($pageTitle)
   $user = $_SESSION["user"]["username"];
   if (isset($_SESSION["user"])) {
     $login = "<form class='login' method='POST' action='login.php'>
-    <span>Logged in as $user <span>
-    <button type='submit' name=login>Log Out</button>
+    <span>Logged in as $user </span>
+    <input type='submit' name='login' value='Log Out'>
+    <a id='adminbutton' href='edit-letters.php'>Admin Page</a>
   </form>";
   } else {
     $login = "<form class='login' method='POST' action='login.php'>
    <label>Sign In</label>
    <input type=text name=username placeholder='Username'>
    <input type=text name=pass placeholder='Password'>
-   <button type='submit' name=login>Log In</button>
+   <input type='submit' name='login' value='Log in'>
    <span id='loginfail'>$loginfail</span>
   </form>";
   }
