@@ -32,7 +32,7 @@ article {
 article>h2 {
     font-size: 32px;
     font-family: 'Lora', serif;
-    text-align: center;
+    margin-left: 12px;
 }
 
 h2 {
@@ -154,7 +154,7 @@ header>h1+h1 {
     flex-flow: row wrap;
     align-items: center;
     float: right;
-    max-width: 25%;
+    max-width: 30%;
 }
 
 .login label {
@@ -458,6 +458,11 @@ form>input {
     border-radius: 5px;
     margin-left: 45%;
     margin-top: 10px;
+}
+
+input[type=checkbox] {
+    margin-left: 43%;
+    margin-right: 10px;
 }
 
 input[type=submit] {

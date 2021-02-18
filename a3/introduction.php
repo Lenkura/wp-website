@@ -8,7 +8,7 @@ start_module("Home");
     <main>
         <article>
             <h2>Introduction & How to Read</h2>
-            <h3>By Douglas Richard Baker (Son of Douglas Raymond Baker)</h3>
+            <h2>By Douglas Richard Baker (Son of Douglas Raymond Baker)</h2>
             <p>These are copies of letters written by my father Douglas Raymond Baker during the First World War (1914-1918) to his family in Gympie. I have three thick exercise books in which the letters were copied in hand writing by my Aunt Alice, his
                 sister. I understand that this was done so his letters could be sent on to other members of the family. I don’t know if the originals are still in existence, probably not.</p>
             <p>In the early letters Alice has not included the name of the person they were written to but later she writes at the beginning, “Letter to Dot”, “Letter to Mother”, etc. and later still copies the original, “Dear Al”, “Dear Mag”, etc.. Likewise

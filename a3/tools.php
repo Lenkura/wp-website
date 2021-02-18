@@ -36,7 +36,7 @@ function start_module($pageTitle)
       $loginfail =  $_SESSION['message'];
       unset($_SESSION['message']);
   }
-  
+  /*Change input field of the password to the password*/ 
   $user = $_SESSION["user"]["username"];
   if (isset($_SESSION["user"])) {
     $login = "<form class='login' method='POST' action='login.php'>
@@ -48,7 +48,7 @@ function start_module($pageTitle)
     $login = "<form class='login' method='POST' action='login.php'>
    <label>Sign In</label>
    <input type=text name=username placeholder='Username'>
-   <input type=text name=pass placeholder='Password'>
+   <input type=text name=pass placeholder='Password'> 
    <input type='submit' name='login' value='Log in'>
    <span id='loginfail'>$loginfail</span>
   </form>";
