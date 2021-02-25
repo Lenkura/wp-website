@@ -130,17 +130,20 @@ function dynamiccontent()
 function letter($num)
 {
   $correspondence = $headings = array();
-  $i = 0;
-  if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
+
+ // if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
+  if (($fp = fopen("C:\Users\Raymond\Downloads\letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
     while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false) {
       if (empty($headings)) {
         $headings = $aLineOfCells;
         continue;
       }
       foreach ($aLineOfCells as $k => $value) {
-        $correspondence[$i][$headings[$k]] = $value;
+        if ($k==0) {
+          $index = $value;
+        }
+        $correspondence[$index][$headings[$k]] = $value;
       }
-      $i++;
     }
     flock($fp, LOCK_UN);
     fclose($fp);
@@ -156,8 +159,6 @@ function letter($num)
     <main>
     <article class='cardnote'>
     <h2>[Post Card] $formateddate.</h2>
-   <p> On the first page of the exercise book Aunt Alice has written:- Book No. 1 written by Alice Baker. Letters received from D. R. Baker after his enlistment for the war Sept. 1914.
-           </p>
            <p class='hovertip'>Hover over the card for a map</p>
        </article>
        <article class='postcard'>
