@@ -42,8 +42,5 @@ start_module("Home");
                 <input type="submit" value="Submit">
             </form>
         </article>
-        <pre><?php print_r($_POST); ?></pre>
-        <pre><?= $_SESSION["user"]["username"] ?></pre>
-        <?php dynamiccontent(); beep(); ?>
         <?php end_module(); ?>
         <script>retrieverememberme()</script>

@@ -97,36 +97,8 @@ function start_module($pageTitle)
 HEADER;
   echo $header;
 }
-//File Reader
-function beep()
-{
-  echo "<p>This is a test</p>";
-}
-function dynamiccontent()
-{
-  $correspondence = $headings = array();
-  $i = 0;
-  if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
-    while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false) {
-      if (empty($headings)) {
-        $headings = $aLineOfCells;
-        continue;
-      }
-      foreach ($aLineOfCells as $k => $value) {
-        $correspondence[$i][$headings[$k]] = $value;
-      }
-      $i++;
-    }
-    flock($fp, LOCK_UN);
-    fclose($fp);
-    print_r($headings);
-    $location = $correspondence[5]["Town"] . "map.PNG";
-    echo "<p>$location</p>";
-    print_r($correspondence[0]);
-    echo "<p>{$correspondence[0][Content]}</p>";
-  }
-}
-//adapted from https://stackoverflow.com/questions/4801895/csv-to-associative-array
+
+
 function letter($num)
 {
   $correspondence = $headings = array();
@@ -147,6 +119,7 @@ function letter($num)
     }
     flock($fp, LOCK_UN);
     fclose($fp);
+    //adapted from https://stackoverflow.com/questions/4801895/csv-to-associative-array
     $date = $correspondence[$num]["DateStart"];
     $datec = date_create($correspondence[$num]["DateStart"]);
     $formateddate = date_format($datec, "dS F Y");
