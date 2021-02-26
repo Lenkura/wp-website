@@ -122,7 +122,7 @@ function letter($num)
     //adapted from https://stackoverflow.com/questions/4801895/csv-to-associative-array
     $date = $correspondence[$num]["DateStart"];
     $datec = date_create($correspondence[$num]["DateStart"]);
-    $formateddate = date_format($datec, "dS F Y");
+    $formateddate = date_format($datec, "jS F Y");
     $content = $correspondence[$num]["Content"];
     if ($correspondence[$num]["Town"] == "")
       $location = "nolocation.png";
