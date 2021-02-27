@@ -31,12 +31,11 @@ FOOTER;
 
 function start_module($pageTitle)
 {
-  if (isset($_SESSION['message']))
-  {
-      $loginfail =  $_SESSION['message'];
-      unset($_SESSION['message']);
+  if (isset($_SESSION['message'])) {
+    $loginfail =  $_SESSION['message'];
+    unset($_SESSION['message']);
   }
-  /*Change input field of the password to the password*/ 
+  /*Change input field of the password to the password*/
   $user = $_SESSION["user"]["username"];
   if (isset($_SESSION["user"])) {
     $login = "<form class='login' method='POST' action='login.php'>
@@ -103,7 +102,7 @@ function letter($num)
 {
   $correspondence = $headings = array();
 
- // if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
+  // if (($fp = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
   if (($fp = fopen("C:\Users\Raymond\Downloads\letters-home.txt", "r")) && flock($fp, LOCK_SH) !== false) {
     while (($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false) {
       if (empty($headings)) {
@@ -111,7 +110,7 @@ function letter($num)
         continue;
       }
       foreach ($aLineOfCells as $k => $value) {
-        if ($k==0) {
+        if ($k == 0) {
           $index = $value;
         }
         $correspondence[$index][$headings[$k]] = $value;
@@ -165,7 +164,8 @@ BLOCK;
     }
   }
 }
-function admincheck(){
+function admincheck()
+{
   if (!isset($_SESSION["user"]))
-  header("Location: index.php");
+    header("Location: index.php");
 }

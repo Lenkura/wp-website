@@ -6,6 +6,6 @@ start_module("Home");
 ?>
 
 <main>
- <h1>Secret Stuff to be added</h1>
+    <h1>Secret Stuff to be added</h1>
 
-  <?php end_module(); ?>
+    <?php end_module(); ?>
