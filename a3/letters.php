@@ -2,14 +2,17 @@
 <html lang='en'>
 <?php require_once('tools.php');
 start_module("Home");
-letter('1914/08/28');
 ?>
+<main>
+    <article class='cardnote'>
+        <h2>Letter and Post Cards</h2>
+        <p class='hovertip'>Hover over Post Cards for a map</p>
+    </article>
 
-
-
-        <article class='letternav'>
-            <a href="letters5.php" id='letternavl'>Previous article</a>
-            <a href="links.php" id='letterdirectory'>Letter Directory</a>
-            <a href="letters1.php" id='letternavr'>Next article</a>
-        </article>
-        <?php end_module(); ?>
+    <?php
+    letter('1914/08/25');
+    letter('1914/08/28');
+    letter('1914/08/31');
+    letter('1914/09/03');
+    letter('1914/09/07');
+    end_module(); ?>

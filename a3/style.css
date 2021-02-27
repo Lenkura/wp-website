@@ -328,7 +328,7 @@ article.postcard div:nth-child(1) {
 }
 
 .letter {
-    margin-top: 10px;
+    margin: 30px auto;
     background-image: url("../../media/paper.png");
     background-size: cover;
     color: black;
@@ -599,7 +599,7 @@ footer {
         border-style: none;
         height: 700px;
         width: 80%;
-        margin: 0 10%;
+        margin: 15px 10%;
         position: relative;
     }
     article.postcard div {

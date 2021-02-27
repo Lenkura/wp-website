@@ -89,7 +89,7 @@ function start_module($pageTitle)
   <ul>
     <li><a href="index.php">Home</a></li>
     <li><a href="introduction.php">Introduction</a></li>
-    <li><a href="links.php"> Document Index</a></li>
+    <li><a href="letters.php">Letter & Cards</a></li>
     <li><a href="contact.php">Contact</a></li>
   </ul>
 </nav>
@@ -128,11 +128,6 @@ function letter($num)
     else $location = $correspondence[$num]["Town"] . "map.png";
     if ($correspondence[$num]["Type"] == 'Postcard') {
       $postcard = <<<"BLOCK"
-    <main>
-    <article class='cardnote'>
-    <h2>[Post Card] $formateddate.</h2>
-           <p class='hovertip'>Hover over the card for a map</p>
-       </article>
        <article class='postcard'>
            <div>
                <p class='carddate'>$date.</p>
@@ -149,10 +144,6 @@ BLOCK;
       echo $postcard;
     } else if ($correspondence[$num]["Type"] == 'Letter') {
       $letter = <<<"BLOCK"
-      <main>
-        <article class='cardnote'>
-            <h2>[Letter] $formateddate.</h2>
-        </article>
         <article class='letter'>
             <p class='carddate'>$date.</p>
             <section class='lettercontent'>$content</section>
