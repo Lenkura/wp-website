@@ -6,7 +6,7 @@ start_module("Home");
 <main>
     <article class='cardnote'>
         <h2>Letter and Post Cards</h2>
-        <p class='hovertip'>Hover over Post Cards for a map</p>
+        <p class='hovertip'>Hover over Post Cards for a map if the location is known</p>
     </article>
 
     <?php
